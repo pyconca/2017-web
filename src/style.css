@@ -35,6 +35,10 @@ a:hover {
     color: #048ABF;
 }
 
+.code-4 {
+  color: #F2A516;
+}
+
 
 @media (min-width: 600px) {
     body {
