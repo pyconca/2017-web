@@ -50,7 +50,7 @@ a:hover {
 
     pre {
         width: 100vw;
-        padding-left: 2em;
+        padding: 0 2em;
     }
 }
 
