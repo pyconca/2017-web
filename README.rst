@@ -1,7 +1,9 @@
 PyCon Canada 2017
 =================
 
-The website for PyCon Canada 2017.
+The website for `PyCon Canada 2017`_.
+
+.. _`PyCon Canada 2017`: https://2017.pycon.ca/
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
@@ -83,6 +85,3 @@ Deployment
 ----------
 
 The following details how to deploy this application.
-
-
-

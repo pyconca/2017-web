@@ -1,22 +1,13 @@
-.. PyCon Canada 2017 documentation master file, created by
-   sphinx-quickstart.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. include:: ../README.rst
 
-Welcome to PyCon Canada 2017's documentation!
-====================================================================
-
-Contents:
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
 
-   install
+   develop
    deploy
-   docker_ec2
-   tests
-
-
 
 Indices and tables
 ==================

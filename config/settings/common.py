@@ -12,11 +12,11 @@ from __future__ import absolute_import, unicode_literals
 
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 3  # (pyconca2017/config/settings/common.py - 3 = pyconca2017/)
+ROOT_DIR = environ.Path(__file__) - 3
 APPS_DIR = ROOT_DIR.path('pyconca2017')
 
 env = environ.Env()
-env.read_env()
+env.read_env(ROOT_DIR.file('.env'))
 
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
