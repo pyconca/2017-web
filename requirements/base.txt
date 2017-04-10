@@ -10,7 +10,8 @@ django==1.10.5
 # Configuration
 django-environ==0.4.1
 
-
+# Symposion
+git+git://github.com/pyconca/symposion.git@2016.6#egg=symposion
 
 # Forms
 django-braces==1.10.0
@@ -18,6 +19,7 @@ django-crispy-forms==1.6.1
 
 # Models
 django-model-utils==2.6.1
+django-timezones==0.2
 
 # Images
 Pillow==4.0.0
@@ -43,7 +45,7 @@ redis>=2.10.5
 
 
 
-rcssmin==1.0.6 
+rcssmin==1.0.6
 django-compressor==2.1
 
 

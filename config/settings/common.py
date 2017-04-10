@@ -40,6 +40,16 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+
+    # symposion
+    "symposion",
+    "symposion.conference",
+    "symposion.proposals",
+    "symposion.reviews",
+    "symposion.schedule",
+    "symposion.speakers",
+    "symposion.sponsorship",
+    "symposion.teams",
 )
 
 # Apps specific for this project go here.
@@ -47,6 +57,7 @@ LOCAL_APPS = (
     # custom users app
     'pyconca2017.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'pyconca2017.pycon_proposals',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -255,3 +266,11 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+
+# Symposion
+CONFERENCE_ID = 1
+SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/"
+PROPOSAL_FORMS = {
+    "tutorial": "pyconca2017.pycon_proposals.forms.TutorialProposalForm",
+    "talk": "pyconca2017.pycon_proposals.forms.TalkProposalForm",
+}

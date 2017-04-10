@@ -8,6 +8,9 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
+import symposion.views
+
+
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
@@ -21,6 +24,13 @@ urlpatterns = [
 
     # Your stuff: custom urls includes go here
 
+    url(r"^dashboard/", symposion.views.dashboard, name="dashboard"),
+    url(r"^speaker/", include("symposion.speakers.urls")),
+    url(r"^proposals/", include("symposion.proposals.urls")),
+    url(r"^sponsors/", include("symposion.sponsorship.urls")),
+    url(r"^teams/", include("symposion.teams.urls")),
+    url(r"^reviews/", include("symposion.reviews.urls")),
+    url(r"^schedule/", include("symposion.schedule.urls")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
