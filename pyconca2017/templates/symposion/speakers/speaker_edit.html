@@ -2,12 +2,12 @@
 
 {% load bootstrap %}
 {% load i18n %}
-{% load pinax_boxes_tags %}
+{#{% load pinax_boxes_tags %}#}
 
 {% block page_title %}{% trans "Edit Speaker Profile" %}{% endblock %}
 
 {% block body %}
-    {% box "speaker-profile" %}
+{#    {% box "speaker-profile" %}#}
 
     <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}

@@ -50,6 +50,9 @@ THIRD_PARTY_APPS = (
     "symposion.speakers",
     "symposion.sponsorship",
     "symposion.teams",
+
+    "bootstrapform",
+    "markitup",
 )
 
 # Apps specific for this project go here.
@@ -274,3 +277,8 @@ PROPOSAL_FORMS = {
     "tutorial": "pyconca2017.pycon_proposals.forms.TutorialProposalForm",
     "talk": "pyconca2017.pycon_proposals.forms.TalkProposalForm",
 }
+
+
+MARKITUP_SET = "markitup/sets/markdown"
+MARKITUP_FILTER = ["symposion.markdown_parser.parse", {}]
+MARKITUP_SKIN = "markitup/skins/simple"

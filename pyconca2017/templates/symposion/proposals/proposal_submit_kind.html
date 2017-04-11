@@ -1,7 +1,7 @@
 {% extends "symposion/proposals/base.html" %}
 
 {% load bootstrap %}
-{% load pinax_boxes_tags %}
+{#{% load pinax_boxes_tags %}#}
 {% load markitup_tags %}
 {% load i18n %}
 
@@ -11,8 +11,8 @@
     <div class="page-header">
         <h2>Submit a Proposal</h2>
     </div>
-    
-    {% box "example_proposal" %}
+
+{#    {% box "example_proposal" %}#}
 
     <form method="POST" action="" enctype="multipart/form-data" class="form-horizontal">
         {% csrf_token %}

@@ -1,4 +1,4 @@
-{% extends "site_base.html" %}
+{% extends "base.html" %}
 
 {% load bootstrap %}
 {% load i18n %}
@@ -10,7 +10,7 @@
 
 {% block body %}
 
-    {% box "sponsorship-apply" %}
+{#    {% box "sponsorship-apply" %}#}
 
     <form method="POST" action="" class="form-horizontal">
         {% csrf_token %}
