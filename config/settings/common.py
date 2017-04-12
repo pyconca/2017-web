@@ -53,6 +53,7 @@ THIRD_PARTY_APPS = (
 
     "bootstrapform",
     "markitup",
+    "django_bleach",
 )
 
 # Apps specific for this project go here.

@@ -9,6 +9,7 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
 import symposion.views
+from pyconca2017.pycon_proposals.views import submit_proposal
 
 
 urlpatterns = [
@@ -31,6 +32,7 @@ urlpatterns = [
     url(r"^teams/", include("symposion.teams.urls")),
     url(r"^reviews/", include("symposion.reviews.urls")),
     url(r"^schedule/", include("symposion.schedule.urls")),
+    url(r'^submit_proposal/$', submit_proposal, name='submit_talk_proposal'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -50,6 +50,12 @@
             <ul class="nav navbar-nav pull-xs-right">
               {% if request.user.is_authenticated %}
                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'submit_talk_proposal' %}">{% trans "Submit proposal" %}</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'dashboard' %}">{% trans "Dashboard" %}</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
                 </li>
                 <li class="nav-item">
@@ -80,9 +86,14 @@
       {% block content %}
         <p>Use this document as a way to quick start any new project.</p>
       {% endblock content %}
-      {% block body %}
-        <p>Alternative.</p>
-      {% endblock body %}
+        {% block body_outer %}
+            <div class="row">
+                <div class="col-md-12">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div>
+        {% endblock %}
 
     </div> <!-- /container -->
 
