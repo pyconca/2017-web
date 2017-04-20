@@ -20,7 +20,6 @@ django-bootstrap-form==3.2.1
 
 # Models
 django-model-utils==2.6.1
-django-timezones==0.2
 
 # Images
 Pillow==4.0.0
