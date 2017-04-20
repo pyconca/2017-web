@@ -7,6 +7,8 @@ from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 
+from symposion.speakers.models import Speaker
+
 
 @python_2_unicode_compatible
 class User(AbstractUser):
@@ -20,3 +22,10 @@ class User(AbstractUser):
 
     def get_absolute_url(self):
         return reverse('users:detail', kwargs={'username': self.username})
+
+    @property
+    def cfp_speaker_profile(self):
+        try:
+            return self.speaker_profile
+        except Speaker.DoesNotExist:
+            pass

@@ -24,6 +24,7 @@ django-timezones==0.2
 
 # Images
 Pillow==4.0.0
+easy-thumbnails==2.4.1
 
 # For user registration, either via email or social
 # Well-built with regular release cycles!

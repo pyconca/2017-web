@@ -1,12 +1,15 @@
 from datetime import date, datetime
 import pytz
+from django.contrib.auth.models import Permission
 
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management import call_command
+from django.core.management.base import BaseCommand
 from django.conf import settings
-from django.utils import timezone
+
 
 from symposion.conference.models import Conference, Section
 from symposion.proposals.models import ProposalKind, ProposalSection
+from symposion.teams.models import Team
 
 from pyconca2017.pycon_proposals.models import TalkProposal, TutorialProposal
 
@@ -29,7 +32,7 @@ data = {
 
     'proposal_kinds': [{
         'section': 'talks',
-        'name': 'Task',
+        'name': 'Talk',
         'slug': 'talk'
     }, {
         'section': 'tutorials',
@@ -49,7 +52,21 @@ data = {
         'end': datetime(2017, 6, 30, 23, 59, 59, tzinfo=pytz.timezone(settings.TIME_ZONE)),
         'published': True,
         'closed': False,
-    }]
+    }],
+
+    'teams': [{
+                  'slug': 'reviewers',
+                  'name': 'Reviewers',
+                  'description': 'Review committee.',
+                  'access': 'invitation',
+                  'permissions': ['can_review_talks', ]
+              }, {
+                  'slug': 'organizers',
+                  'name': 'Core organizers',
+                  'description': 'Core organizing committee.',
+                  'access': 'invitation',
+                  'permissions': ['can_review_talks', 'can_review_unbiased', 'can_manage_talks']
+              }]
 }
 
 
@@ -59,6 +76,8 @@ class Command(BaseCommand):
         'setup_conference',
         'setup_sections',
         'setup_proposals',
+        'setup_permissions',
+        'setup_teams',
     ]
 
     # def add_arguments(self, parser):
@@ -129,3 +148,26 @@ class Command(BaseCommand):
                 ProposalSection.objects.create(**_section)
 
         self.stdout.write('Done!')
+
+    def setup_permissions(self):
+        """ Setup review permission. """
+        call_command('create_review_permissions')
+
+    def setup_teams(self):
+        """ Setup teams. """
+
+        def assign_permission(t, name):
+            permission = Permission.objects.get(codename=name)
+            t.permissions.add(permission)
+
+        for team_data in data['teams']:
+            team_permissions = team_data.pop('permissions')
+            try:
+                team = Team.objects.get(slug=team_data['slug'])
+                for field, value in team_data.items():
+                    setattr(team, field, value)
+                team.save()
+            except Team.DoesNotExist:
+                team = Team.objects.create(**team_data)
+            for _p in team_permissions:
+                assign_permission(team, _p)

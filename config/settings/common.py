@@ -40,6 +40,7 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+    'allauth.socialaccount.providers.github',
 
     # symposion
     "symposion",
@@ -54,6 +55,7 @@ THIRD_PARTY_APPS = (
     "bootstrapform",
     "markitup",
     "django_bleach",
+    "easy_thumbnails",
 )
 
 # Apps specific for this project go here.
@@ -62,6 +64,7 @@ LOCAL_APPS = (
     'pyconca2017.users.apps.UsersConfig',
     # Your stuff: custom apps go here
     'pyconca2017.pycon_proposals',
+    'pyconca2017.pycon_proposals.templatetags',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -173,6 +176,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+                "symposion.reviews.context_processors.reviews",
                 # Your stuff: custom template context processors go here
             ],
         },
@@ -241,6 +245,7 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
+    "symposion.teams.backends.TeamPermissionsBackend",
 )
 
 # Some really nice defaults
@@ -251,6 +256,15 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
 ACCOUNT_ADAPTER = 'pyconca2017.users.adapters.AccountAdapter'
 SOCIALACCOUNT_ADAPTER = 'pyconca2017.users.adapters.SocialAccountAdapter'
+SOCIALACCOUNT_PROVIDERS = {
+    'github': {
+        'SCOPE': [
+            'user',
+            'repo',
+            'read:org',
+        ],
+    }
+}
 
 # Custom user app defaults
 # Select the correct user model

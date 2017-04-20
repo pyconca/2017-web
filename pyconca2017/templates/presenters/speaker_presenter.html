@@ -1,0 +1,28 @@
+{% load thumbnail %}
+
+<dl>
+  <dt>Name</dt>
+  <dd>{{ obj.name | noval:"---" }}</dd>
+  <dt>Country</dt>
+  <dd>{{ obj.country | noval:"---" }}</dd>
+  <dt>Region</dt>
+  <dd>{{ obj.region | noval:"---" }}</dd>
+  <dt>City</dt>
+  <dd>{{ obj.city | noval:"---" }}</dd>
+  <dt>Phone number</dt>
+  <dd>{{ obj.phone_number | noval:"---" }}</dd>
+  <dt>Secondary contact</dt>
+  <dd>{{ obj.secondary_contact | noval:"---" }}</dd>
+  <dt>Bio</dt>
+  <dd>{{ obj.biography_html | safe | noval:"---" }}</dd>
+  <dt>Twitter username</dt>
+  <dd>{{ obj.twitter_usernam | noval:"---" }}</dd>
+  <dt>GitHub username</dt>
+  <dd>{{ obj.github_usernam | noval:"---" }}</dd>
+</dl>
+
+{% if obj.photo %}
+    <img src="{% thumbnail obj.photo '128x128' %}" alt="{{ obj.name }}" />
+{% else %}
+    No photo
+{% endif %}
