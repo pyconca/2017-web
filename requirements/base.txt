@@ -11,7 +11,7 @@ django==1.10.5
 django-environ==0.4.1
 
 # Symposion
-git+git://github.com/pyconca/symposion.git@django-upgrade#egg=symposion
+git+git://github.com/pyconca/symposion.git@2017.rc1#egg=symposion
 
 # Forms
 django-braces==1.10.0
