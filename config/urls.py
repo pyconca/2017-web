@@ -22,6 +22,7 @@ urlpatterns = [
     # User management
     url(r'^users/', include('pyconca2017.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^cfp/', include('pyconca2017.pycon_proposals.urls')),
 
     # Your stuff: custom urls includes go here
 

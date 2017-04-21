@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}User: {{ object.username }}{% endblock %}
+
+{% block content %}
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-12">
+
+        <h2>{{ object.username }}</h2>
+        {% if object.name %}
+          <p>{{ object.name }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-12">
+        {% include_md 'cfp_main.md' %}
+
+        {% if request.user.is_authenticated %}
+          {% if kinds %}
+            <p>Select what kind of proposal you'd like to submit:</p>
+
+            {% for kind in kinds %}
+              <a class="btn btn-lg btn-primary" href="{% url 'proposal_submit_kind' kind %}" role="button">Submit
+                your {{ kind }} proposal</a>
+            {% endfor %}
+          {% else %}
+            <p>Proposals are not currently open for submission.</p>
+          {% endif %}
+
+        {% else %}
+          <a class="btn btn-lg btn-primary" href="{% url 'account_signup' %}?next={% url 'submit_talk_proposal' %}"
+             role="button">Sign Up to submit proposal</a>
+        {% endif %}
+      </div>
+
+    </div>
+
+
+  </div>
+{% endblock content %}

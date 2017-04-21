@@ -176,7 +176,8 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
-                "symposion.reviews.context_processors.reviews",
+                'symposion.reviews.context_processors.reviews',
+                'pyconca2017.pycon_proposals.context_processors.conference_context',
                 # Your stuff: custom template context processors go here
             ],
         },

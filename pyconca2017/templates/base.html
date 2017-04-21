@@ -43,15 +43,15 @@
                 <a class="nav-link" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="{% url 'cfp_main' %}">{% trans "Call for Proposal" %}</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="{% url 'about' %}">About</a>
               </li>
             </ul>
 
             <ul class="nav navbar-nav pull-xs-right">
               {% if request.user.is_authenticated %}
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'submit_talk_proposal' %}">{% trans "Submit proposal" %}</a>
-                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'dashboard' %}">{% trans "Dashboard" %}</a>
                 </li>
