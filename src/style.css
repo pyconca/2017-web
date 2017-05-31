@@ -50,7 +50,11 @@ a:hover {
 
     pre {
         width: 100vw;
-        padding: 0 2em;
+        margin: 0 2em;
+    }
+
+    .hide-desktop {
+      display: none;
     }
 }
 
