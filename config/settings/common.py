@@ -16,7 +16,10 @@ ROOT_DIR = environ.Path(__file__) - 3
 APPS_DIR = ROOT_DIR.path('pyconca2017')
 
 env = environ.Env()
-env.read_env(ROOT_DIR.file('.env'))
+try:
+    env.read_env(ROOT_DIR.file('.env'))
+except FileNotFoundError:
+    pass
 
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
