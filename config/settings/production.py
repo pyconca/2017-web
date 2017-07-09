@@ -109,6 +109,7 @@ INSTALLED_APPS += ('gunicorn', )
 # COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 # COMPRESS_URL = STATIC_URL
 # COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
+
 # EMAIL
 # ------------------------------------------------------------------------------
 DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL',
@@ -208,6 +209,8 @@ LOGGING = {
 
 # Custom Admin URL, use {% url 'admin:index' %}
 ADMIN_URL = env('DJANGO_ADMIN_URL')
+
+ADMINS = ()  # FIXME: remove later
 
 # Your production stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
