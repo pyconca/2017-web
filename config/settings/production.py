@@ -104,6 +104,11 @@ INSTALLED_APPS += ('gunicorn', )
 # # 'django.contrib.staticfiles'
 # AWS_PRELOAD_METADATA = True
 # INSTALLED_APPS = ('collectfast', ) + INSTALLED_APPS
+
+MIDDLEWARE += (
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+)
+
 # # COMPRESSOR
 # # ------------------------------------------------------------------------------
 # COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
