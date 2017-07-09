@@ -15,19 +15,19 @@ from pyconca2017.pycon_proposals.models import TalkProposal, TutorialProposal
 
 data = {
     'title': 'PyCon Canada 2017',
-    'start_date': date(2017, 11, 10),
-    'end_date': date(2017, 11, 12),
+    'start_date': date(2017, 11, 18),
+    'end_date': date(2017, 11, 19),
 
     'sections': [{
         'slug': 'talks',
         'name': 'Talks',
-        'start_date': date(2017, 11, 11),
-        'end_date': date(2017, 11, 12),
+        'start_date': date(2017, 11, 18),
+        'end_date': date(2017, 11, 19),
     }, {
         'slug': 'tutorials',
         'name': 'Tutorials',
-        'start_date': date(2017, 11, 11),
-        'end_date': date(2017, 11, 12),
+        'start_date': date(2017, 11, 18),
+        'end_date': date(2017, 11, 19),
     }],
 
     'proposal_kinds': [{
@@ -43,13 +43,13 @@ data = {
     'proposal_sections': [{
         'section': 'talks',
         'start': datetime(2017, 4, 1, tzinfo=pytz.timezone(settings.TIME_ZONE)),
-        'end': datetime(2017, 6, 30, 23, 59, 59, tzinfo=pytz.timezone(settings.TIME_ZONE)),
+        'end': datetime(2017, 8, 31, 23, 59, 59, tzinfo=pytz.timezone(settings.TIME_ZONE)),
         'published': True,
         'closed': False,
     }, {
         'section': 'tutorials',
         'start': datetime(2017, 4, 1, tzinfo=pytz.timezone(settings.TIME_ZONE)),
-        'end': datetime(2017, 6, 30, 23, 59, 59, tzinfo=pytz.timezone(settings.TIME_ZONE)),
+        'end': datetime(2017, 8, 31, 23, 59, 59, tzinfo=pytz.timezone(settings.TIME_ZONE)),
         'published': True,
         'closed': False,
     }],
