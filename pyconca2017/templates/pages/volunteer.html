@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{% trans "Volunteering at PyCon Canada 2017" %}</h1>
+        <p>
+          {% blocktrans %}
+            We're all looking forward to the great conference in November -the organizing team is working hard to make this happen, but we can't do it alone.
+
+            Volunteers <strong>must be registered</strong> to volunteer, but we welcome <strong>all attendees</strong> to lend a hand. We much appreciate any assistance you can give us.
+          {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -75,6 +75,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -139,6 +140,17 @@ SITE_ID = 1
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-i18n
 USE_I18N = True
+
+from django.utils.translation import ugettext_lazy as _
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('fr', _('French')),
+]
+
+LOCALE_PATHS = [
+    str(APPS_DIR.path('locale')),
+]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-l10n
 USE_L10N = True
@@ -287,6 +299,8 @@ ADMIN_URL = r'^admin/'
 # ------------------------------------------------------------------------------
 
 # Symposion
+CFP_APP_ON = False  # do not expose
+
 CONFERENCE_ID = 1
 SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/"
 PROPOSAL_FORMS = {

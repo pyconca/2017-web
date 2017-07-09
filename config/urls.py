@@ -8,13 +8,17 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
-import symposion.views
-from pyconca2017.pycon_proposals.views import submit_proposal
-
 
 urlpatterns = [
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
+    url(r'^venue/$', TemplateView.as_view(template_name='pages/venue.html'), name='venue'),
+    url(r'^volunteer/$', TemplateView.as_view(template_name='pages/volunteer.html'), name='volunteer'),
+    url(r'^sponsors/$', TemplateView.as_view(template_name='pages/sponsors.html'), name='sponsors'),
+    url(r'^schedule/$', TemplateView.as_view(template_name='pages/schedule.html'), name='schedule'),
+    url(r'^code-of-conduct/$', TemplateView.as_view(template_name='pages/code_of_conduct.html'), name='code-of-conduct'),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, admin.site.urls),
@@ -22,20 +26,20 @@ urlpatterns = [
     # User management
     url(r'^users/', include('pyconca2017.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^cfp/', include('pyconca2017.pycon_proposals.urls')),
 
     # Your stuff: custom urls includes go here
 
-    url(r"^dashboard/", symposion.views.dashboard, name="dashboard"),
-    url(r"^speaker/", include("symposion.speakers.urls")),
-    url(r"^proposals/", include("symposion.proposals.urls")),
-    url(r"^sponsors/", include("symposion.sponsorship.urls")),
-    url(r"^teams/", include("symposion.teams.urls")),
-    url(r"^reviews/", include("symposion.reviews.urls")),
-    url(r"^schedule/", include("symposion.schedule.urls")),
-    url(r'^submit_proposal/$', submit_proposal, name='submit_talk_proposal'),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+# Symposion
+if settings.CFP_APP_ON:
+    urlpatterns += [
+        url(r'^cfp/', include('pyconca2017.pycon_proposals.urls')),
+    ]
+
+# Static
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit

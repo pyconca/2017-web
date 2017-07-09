@@ -2,12 +2,12 @@
 from __future__ import unicode_literals, absolute_import
 
 from django.contrib.auth.models import AbstractUser
+from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
-
-from symposion.speakers.models import Speaker
+from django.conf import settings
 
 
 @python_2_unicode_compatible
@@ -27,5 +27,5 @@ class User(AbstractUser):
     def cfp_speaker_profile(self):
         try:
             return self.speaker_profile
-        except Speaker.DoesNotExist:
+        except ObjectDoesNotExist:
             pass
