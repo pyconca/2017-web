@@ -8,6 +8,10 @@
   border-color: #eed3d7;
   color: #b94a48; }
 
+html, body {
+  height: 100%;
+  margin: 0; }
+
 .navbar {
   border-radius: 0px; }
 
@@ -30,15 +34,15 @@
   min-height: 100%;
   /* Equal to height of footer */
   /* But also accounting for potential margin-bottom of last child */
-  margin-bottom: -300px; }
+  margin-bottom: -350px; }
 
 .py-footer,
 .push {
-  height: 300px; }
+  height: 350px; }
 
 .footer-info {
-  margin-top: 50px;
-  margin-bottom: 50px; }
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 .asset-footer-full {
   position: relative;
@@ -47,7 +51,7 @@
   width: 100%;
   color: #96d7e3;
   fill: #96d7e3 !important;
-  height: 300px; }
+  height: 250px; }
 
 .text-carnation {
   color: #f06461; }
