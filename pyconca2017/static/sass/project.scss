@@ -7,12 +7,17 @@
 
 // Alert colors
 
-$white: #fff;
+$white: rgb(245, 245, 245);
 $mint-green: #d6e9c6;
-$black: #000;
+$black: rgb(61, 61, 61);
 $pink: #f2dede;
 $dark-pink: #eed3d7;
 $red: #b94a48;
+$blizzard-blue: rgb(150, 215, 227);
+$carnation: rgb(240, 100, 97);
+
+$mercury: rgb(229, 229, 229);
+$masala: rgb(61, 61, 61);
 
 ////////////////////////////////
 		//Alerts//
@@ -69,4 +74,71 @@ $red: #b94a48;
 
 [hidden][style="display: block;"] {
   display: block !important;
+}
+
+/* Custom styles */
+
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -300px;
+}
+.py-footer,
+.push {
+  height: 300px;
+}
+
+.footer-info {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.asset-footer-full {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: $blizzard-blue;
+  fill: $blizzard-blue !important;
+  height: 300px;
+}
+
+.text-carnation {
+  color: $carnation;
+}
+
+.text-blizzard-blue {
+  color: $blizzard-blue;
+}
+
+.text-masala {
+  color: $masala;
+}
+
+.text-mercury {
+  color: $mercury;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-white {
+  color: $white;
+}
+
+.home-container {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba($white, 0.5) 0%, rgba($white, 1.0) 100%), url("../toolkit/images/hero/pycon-2015-crowd-by-shiroyuki-orig.jpg") center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home-logo {
+  width: 40%;
 }

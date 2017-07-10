@@ -1,103 +1,81 @@
-/* These styles are generated from project.scss. */
+.alert-debug {
+  background-color: whitesmoke;
+  border-color: #d6e9c6;
+  color: #3d3d3d; }
 
-html, body {
-  height: 100%;
-  margin: 0;
-}
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48; }
+
+.navbar {
+  border-radius: 0px; }
+
+@media (max-width: 47.9em) {
+  .navbar-nav .nav-item {
+    display: inline-block;
+    float: none;
+    width: 100%; }
+
+  .navbar-nav .nav-item + .nav-item {
+    margin-left: 0; }
+
+  .nav.navbar-nav.pull-xs-right {
+    float: none !important; } }
+[hidden][style="display: block;"] {
+  display: block !important; }
+
+/* Custom styles */
 .wrapper {
   min-height: 100%;
-
   /* Equal to height of footer */
   /* But also accounting for potential margin-bottom of last child */
-  margin-bottom: -300px;
-}
+  margin-bottom: -300px; }
+
 .py-footer,
 .push {
-  height: 300px;
-}
+  height: 300px; }
 
 .footer-info {
   margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.alert-debug {
-  color: black;
-  background-color: white;
-  border-color: #d6e9c6;
-}
-
-.alert-error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
-}
-
-/* This is a fix for the bootstrap4 alpha release */
-@media (max-width: 47.9em) {
-  .navbar-nav .nav-item {
-    float: none;
-    width: 100%;
-    display: inline-block;
-  }
-
-  .navbar-nav .nav-item + .nav-item {
-    margin-left: 0;
-  }
-
-  .nav.navbar-nav.pull-xs-right {
-    float: none !important;
-  }
-}
-
-/* Display django-debug-toolbar.
-   See https://github.com/django-debug-toolbar/django-debug-toolbar/issues/742
-   and https://github.com/pydanny/cookiecutter-django/issues/317
-*/
-[hidden][style="display: block;"] {
-  display: block !important;
-}
+  margin-bottom: 50px; }
 
 .asset-footer-full {
   position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
-  color: rgb(150, 215, 227);
-  /*background: transparent url("../toolkit/images/illustrations/full.svg") right center no-repeat;*/
+  color: #96d7e3;
   fill: #96d7e3 !important;
-  height: 300px;
-}
+  height: 300px; }
 
 .text-carnation {
-  color: rgb(240, 100, 97);
-}
+  color: #f06461; }
 
 .text-blizzard-blue {
-  color: rgb(150, 215, 227);
-}
+  color: #96d7e3; }
 
 .text-masala {
-  color: rgb(61, 61, 61);
-}
+  color: #3d3d3d; }
 
 .text-mercury {
-  color: rgb(229, 229, 229);
-}
+  color: #e5e5e5; }
 
 .text-black {
-  color: rgb(61, 61, 61);
-}
+  color: #3d3d3d; }
 
 .text-white {
-  color: rgb(229, 229, 229);
-}
+  color: whitesmoke; }
 
 .home-container {
   width: 100%;
-  background: linear-gradient(to bottom, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 1) 100%), url("../toolkit/images/hero/pycon-2015-crowd-by-shiroyuki-orig.jpg") right center no-repeat;
-}
+  background: linear-gradient(to bottom, rgba(245, 245, 245, 0.5) 0%, whitesmoke 100%), url("../toolkit/images/hero/pycon-2015-crowd-by-shiroyuki-orig.jpg") center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .home-logo {
-  width: 40%;
-}
+  width: 40%; }
+
+/*# sourceMappingURL=project.css.map */
