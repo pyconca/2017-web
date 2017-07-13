@@ -10,6 +10,7 @@ Production Configurations
 """
 from __future__ import absolute_import, unicode_literals
 
+import os
 from boto.s3.connection import OrdinaryCallingFormat
 from django.utils import six
 
@@ -104,6 +105,13 @@ INSTALLED_APPS += ('gunicorn', )
 # # 'django.contrib.staticfiles'
 # AWS_PRELOAD_METADATA = True
 # INSTALLED_APPS = ('collectfast', ) + INSTALLED_APPS
+
+public_root = ROOT_DIR.path('../public/')
+
+MEDIA_ROOT = public_root('media')
+MEDIA_URL = "/media/"
+STATIC_ROOT = public_root('static')
+STATIC_URL = "/static/"
 
 MIDDLEWARE += (
     'whitenoise.middleware.WhiteNoiseMiddleware',
