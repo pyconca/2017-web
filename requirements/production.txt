@@ -23,8 +23,6 @@ django-anymail==0.7
 # Deployment
 # -------------------------------------------------------
 dj-database-url==0.4.1
-jinja2==2.8
-Fabric==1.11.1
 
 
 

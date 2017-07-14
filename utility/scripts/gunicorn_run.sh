@@ -22,6 +22,7 @@ export DJANGO_ADMIN_URL=admin
 export DJANGO_ALLOWED_HOSTS='{{ allowed_hosts }}'
 export DJANGO_SECRET_KEY='{{ django_secret_key }}'
 export DJANGO_DEBUG=1
+export DJANGO_SECURE_SSL_REDIRECT=0
 
 # Create the run directory if it doesn't exist
 RUNDIR=$(dirname $SOCKFILE)

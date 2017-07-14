@@ -84,4 +84,8 @@ The email server will exit when you exit the Grunt task on the CLI with Ctrl+C.
 Deployment
 ----------
 
-The following details how to deploy this application.
+To deploy you'd run the `fab` command. Keep in mind, Fabric is only supported for Python 2.
+
+Before you run the command, make sure you have `secret.yml` (with proper secrets) in the root of the repo.
+
+`fab staging deploy -i <path/to/identity_key>`

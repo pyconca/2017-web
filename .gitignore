@@ -67,3 +67,6 @@ mailhog
 
 
 staticfiles/
+
+# Secrets
+secret.yml
