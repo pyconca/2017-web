@@ -3,64 +3,14 @@
 
 {% block content %}
 
-  <div class="row">
-    <div class="col-md-8">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-md-8 offset-md-3">
-
-            <h1>What is PyCon Canada?</h1>
-
-            <p>
-              {% trans "Our main goal is to strengthen the Canadian Python community by providing more opportunities for us to share knowledge and ideas, encourage support and education for speaking at conferences, and increase the visibility of developers, organizations, and companies within the community." %}
-            </p>
-
-            <p>
-              {% trans "PyCon Canada is entirely run by volunteers who are passionate about these goals. We hope to see you at the 2017 conference! We're also proud to host development sprints which provide a gateway for new contributors and a way for you to give back to the open-source community." %}
-            </p>
-
-
-            <h2>{% trans "Join the Conversation" %}</h2>
-
-            <p>
-              {% blocktrans %}
-                Be sure to use <a href="https://twitter.com/intent/tweet?button_hashtag=PyConCA2017">#PyConCA2017</a>.
-                We love hearing from our community members!
-              {% endblocktrans %}
-            </p>
-
-            <h2>{% trans "Key Contacts" %}</h2>
-
-            <ul>
-              <li>
-                {% blocktrans %}
-                  The organizing committee can be contacted at
-                  <a href="mailto:organizers@pycon.ca">organizers@pycon.ca</a>.
-                {% endblocktrans %}
-              </li>
-              <li>
-                {% blocktrans %}
-                  The board can be contacted privately at <a href="mailto:board@pycon.ca">board@pycon.ca</a>.
-                {% endblocktrans %}
-              </li>
-              <li>
-                {% blocktrans %}
-                  You can also find us on: <a href="https://github.com/pyconca/">github.com/pyconca/</a>.
-                {% endblocktrans %}
-              </li>
-            </ul>
-
-            <h2>Organizers</h2>
-            <h2>Sponsors</h2>
-          </div>
-        </div>
-      </div>
+  <div class="container">
+    <div class="c-block-illustration">
+      <h1 class="c-block-illustration__heading">
+        {% include 'components/svgs/svg-pont.html' %}
+        {% trans "PyCon Canada is committed to providing a safe and welcoming atmosphere for all attendees." %}
+      </h1>
     </div>
-    <div class="col-md-4">
-      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/PyConCA2017"
-         data-widget-id="765372112991358978">{{ _('#PyConCA2017 Tweets') }}</a>
-    </div>
+    {% include_md 'code-of-conduct.md' %}
   </div>
 
 {% endblock %}

@@ -2,6 +2,15 @@
 {% load i18n %}
 
 {% block content %}
+  <div class="container">
+
+    <div class="c-block-heading">
+      {% include 'components/svgs/svg-logo-short.html' %}
+      <h1 class="c-block-heading__heading">
+        {% trans "is an initiative to strengthen the Canadian Python community." %}
+      </h1>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-md-8">
@@ -10,16 +19,11 @@
         <div class="row">
           <div class="col-md-8 offset-md-3">
 
-            <h1>What is PyCon Canada?</h1>
+            {% include_md 'about.md' %}
 
-            <p>
-              {% trans "Our main goal is to strengthen the Canadian Python community by providing more opportunities for us to share knowledge and ideas, encourage support and education for speaking at conferences, and increase the visibility of developers, organizations, and companies within the community." %}
-            </p>
-
-            <p>
-              {% trans "PyCon Canada is entirely run by volunteers who are passionate about these goals. We hope to see you at the 2017 conference! We're also proud to host development sprints which provide a gateway for new contributors and a way for you to give back to the open-source community." %}
-            </p>
-
+            <div class="c-block-text c-block-text-md">
+              {% include 'components/svgs/separator.html' %}
+            </div>
 
             <h2>{% trans "Join the Conversation" %}</h2>
 
@@ -29,6 +33,10 @@
                 We love hearing from our community members!
               {% endblocktrans %}
             </p>
+
+            <div class="c-block-text c-block-text-md">
+              {% include 'components/svgs/separator.html' %}
+            </div>
 
             <h2>{% trans "Key Contacts" %}</h2>
 
@@ -51,15 +59,30 @@
               </li>
             </ul>
 
-            <h2>Organizers</h2>
-            <h2>Sponsors</h2>
+            <div class="c-block-text c-block-text-md">
+              {% include 'components/svgs/separator.html' %}
+            </div>
+
+
           </div>
         </div>
       </div>
     </div>
     <div class="col-md-4">
-      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/PyConCA2017" data-widget-id="884419152836009984">#PyConCA2017 Tweets</a>
+      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/PyConCA2017"
+         data-widget-id="884419152836009984">#PyConCA2017 Tweets</a>
     </div>
+  </div>
+
+  <div class="container">
+
+    <h2>Organizers</h2>
+
+    <p class="lead">
+      {% for p, link in ORGANIZERS %}
+        <a href="{{ link }}">{{ p }}</a> {% if not forloop.last %}•{% endif %}
+      {% endfor %}
+    </p>
   </div>
 
 {% endblock %}

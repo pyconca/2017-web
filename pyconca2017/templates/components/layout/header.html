@@ -1,0 +1,53 @@
+{% load i18n %}
+
+<header class="c-head" role="banner">
+  <div class="c-head__wrapper">
+    <a class="c-head__logo-link" href="{% url 'home' %}">
+      {% include 'components/svgs/svg-logo-brand.html' %}
+    </a>
+
+    <p class="c-head__description">
+      Montréal<br/>
+      12-15 Novembre 2017
+    </p>
+
+    <nav class="c-nav c-nav-- c-head__nav" role="navigation">
+      <ul class="c-nav__wrapper">
+        <li class="c-nav__item">
+          <a class="c-nav__link" href="{% url 'about' %}">
+            {% trans "About" %}
+          </a>
+        </li>
+
+{#        <li class="c-nav__item">#}
+{#          <a class="c-nav__link" href="{% url 'sponsors' %}">#}
+{#            {% trans "Sponsors" %}#}
+{#          </a>#}
+{#        </li>#}
+
+{#        <li class="c-nav__item">#}
+{#          <a class="c-nav__link" href="{% url 'schedule' %}">#}
+{#            {% trans "Schedule" %}#}
+{#          </a>#}
+{#        </li>#}
+
+{#        <li class="c-nav__item">#}
+{#          <a class="c-nav__link" href="{% url 'venue' %}">#}
+{#            {% trans "Venue" %}#}
+{#          </a>#}
+{#        </li>#}
+
+        <li class="c-nav__item">
+          {% get_current_language as LANGUAGE_CODE %}
+          <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="language" value="{% if LANGUAGE_CODE == 'en' %}fr{% else %}en{% endif %}" type="hidden">
+            <input type="submit" class="btn btn-link c-nav__link"
+                   value="{% if LANGUAGE_CODE == 'en' %}FR{% else %}EN{% endif %}"/>
+          </form>
+        </li>
+      </ul>
+    </nav>
+{#    <div class="c-head__btn-group">#}
+{#      <a class="c-btn c-btn--primary" href="javascript:void()">Buy a ticket</a></div>#}
+  </div>
+</header>
