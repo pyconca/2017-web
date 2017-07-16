@@ -391,7 +391,7 @@ msgid ""
 msgstr ""
 "\n"
 "                Assurez-vous d'utiliser <a href=\"https://twitter.com/intent/"
-"tweet?button_hashtag=PyConCA2016\">#pyconca2016</a>.                Nous "
+"tweet?button_hashtag=PyConCA2017\">#pyconca2017</a>.                Nous "
 "aimons recevoir des nouvelles de la communauté!"
 
 #: pyconca2017/templates/pages/about.html:41
