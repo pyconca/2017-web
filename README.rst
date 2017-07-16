@@ -13,12 +13,17 @@ The website for `PyCon Canada 2017`_.
 :License: MIT
 
 
-Settings
---------
+Setup
+-----------
 
-Moved to settings_.
+    $ mkvirtualenv 2017-web --python=/usr/bin/python3
+    $ workon 2017-web
+    $ pip install --upgrade -r requirements/local.txt
+    $ export DJANGO_SETTINGS_MODULE=config.settings.local
+    $ python manage.py migrate
+    $ python manage.py pycon_start
+    $ python manage.py runserver
 
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
 
 Basic Commands
 --------------
@@ -33,6 +38,16 @@ Setting Up Your Users
     $ python manage.py createsuperuser
 
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
+
+Setting Up Conference
+^^^^^^^^^^^^^^^^^^^^^
+
+For quick start run
+
+    $ python manage.py pycon_start
+
+This command will setup conference, sections, and other basic configuration. The setup configuration is defined in the
+`pyconca2017/pycon_proposals/management/commands/pycon_start.py`.
 
 Test coverage
 ^^^^^^^^^^^^^
@@ -53,10 +68,39 @@ Running tests with py.test
 Live reloading and Sass CSS compilation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Moved to `Live reloading and SASS compilation`_.
+Moved to `2017-patterns`_.
 
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
+.. _`2017-patterns`: https://github.com/pyconca/2017-patterns
 
+Styles development hack
+
+To use statics from the `2017-patterns` repo while developing, use this hack:
+
+    STATICFILES_DIRS = (
+        # str(APPS_DIR.path('static')),  # <== default
+        str(APPS_DIR.path('../../2017-patterns/dist/assets')),  # use dist from the 2017-patterns repo
+    )
+
+When complete, copy the `dist/assets` directory into `pyconca2017/static` directory.
+
+
+Translations
+^^^^^^^^^^^^
+
+When adding new text, use Django's `i18n` module. Translation file is located here: `pyconca2017/locale/fr/LC_MESSAGES/django.po`.
+
+To add new translations, run:
+
+    $ python manage.py makemessages -a
+
+and then add translations to the locale file.
+
+**Full page articles** can be added as `markdown` files `pyconca2017/templates/markdown` under "en" and "fr" directories, and
+can be used in template as follows:
+
+    {% include_md 'my_markdown_file.md` %}
+
+Language will be looked up automatically. If translation does not exist, the version will fall back to "en"
 
 
 
@@ -86,6 +130,10 @@ Deployment
 
 To deploy you'd run the `fab` command. Keep in mind, Fabric is only supported for Python 2.
 
-Before you run the command, make sure you have `secret.yml` (with proper secrets) in the root of the repo.
+In your Python 2 environment, run:
 
-`fab staging deploy -i <path/to/identity_key>`
+    $ pip install --upgrade -r requirements/deploy.txt
+
+Before you run the deploy command, make sure you have `secret.yml` (with proper secrets) in the root of the repo.
+
+    fab staging deploy -i <path/to/identity_key>

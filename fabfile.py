@@ -116,6 +116,9 @@ def deploy():
             yell(magenta("Collect all the static files..."))
             sudo('%(virtualenv_root)s/bin/python manage.py collectstatic --noinput' % env)
 
+            yell(magenta("Compiling translations..."))
+            sudo('%(virtualenv_root)s/bin/python manage.py compilemessages' % env)
+
             yell(magenta("Give deploy access to logs and run directories..."))
             sudo('chown -R deploy:deploy %(logs_root)s' % env)
             sudo('chown -R deploy:deploy %(run_root)s' % env)
