@@ -1,6 +1,7 @@
 
 ORGANIZERS = {
     ('Francis Deslauriers', 'https://twitter.com/francisDeslaur'),
+    ('Mathieu Leduc-Hamel', 'https://github.com/mlhamel'),
     ('Myles Braithwaite', 'https://mylesb.ca/'),
     ('Peter McCormick', 'https://twitter.com/pdmccormick'),
     ('Terry Yanchynskyy', 'https://github.com/onebit0fme'),
