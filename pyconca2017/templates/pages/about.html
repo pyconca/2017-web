@@ -12,77 +12,80 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-8">
-      <div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
 
-        <div class="row">
-          <div class="col-md-8 offset-md-3">
-
-            {% include_md 'about.md' %}
-
-            <div class="c-block-text c-block-text-md">
-              {% include 'components/svgs/separator.html' %}
-            </div>
-
-            <h2>{% trans "Join the Conversation" %}</h2>
-
-            <p>
-              {% blocktrans %}
-                Be sure to use <a href="https://twitter.com/intent/tweet?button_hashtag=PyConCA2017">#PyConCA2017</a>.
-                We love hearing from our community members!
-              {% endblocktrans %}
-            </p>
-
-            <div class="c-block-text c-block-text-md">
-              {% include 'components/svgs/separator.html' %}
-            </div>
-
-            <h2>{% trans "Key Contacts" %}</h2>
-
-            <ul>
-              <li>
-                {% blocktrans %}
-                  The organizing committee can be contacted at
-                  <a href="mailto:organizers@pycon.ca">organizers@pycon.ca</a>.
-                {% endblocktrans %}
-              </li>
-              <li>
-                {% blocktrans %}
-                  The board can be contacted privately at <a href="mailto:board@pycon.ca">board@pycon.ca</a>.
-                {% endblocktrans %}
-              </li>
-              <li>
-                {% blocktrans %}
-                  You can also find us on: <a href="https://github.com/pyconca/">github.com/pyconca/</a>.
-                {% endblocktrans %}
-              </li>
-            </ul>
-
-            <div class="c-block-text c-block-text-md">
-              {% include 'components/svgs/separator.html' %}
-            </div>
-
-
-          </div>
-        </div>
+        {% include_md 'about.md' %}
       </div>
     </div>
-    <div class="col-md-4">
-      <a class="twitter-timeline" data-width="600" data-height="600" data-theme="light" data-link-color="#f06461" href="https://twitter.com/pyconca">Tweets by pyconca</a>
-      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="row">
+      <div class="col-md-6">
+
+
+        <div class="c-block-text c-block-text-md">
+          {% include 'components/svgs/separator.html' %}
+        </div>
+
+        <h2>{% trans "Join the Conversation" %}</h2>
+
+        <p>
+          {% blocktrans %}
+            Be sure to use <a href="https://twitter.com/intent/tweet?button_hashtag=PyConCA2017">#PyConCA2017</a>.
+            We love hearing from our community members!
+          {% endblocktrans %}
+        </p>
+
+        <div class="c-block-text c-block-text-md">
+          {% include 'components/svgs/separator.html' %}
+        </div>
+
+        <h2>{% trans "Key Contacts" %}</h2>
+
+        <ul>
+          <li>
+            {% blocktrans %}
+              The organizing committee can be contacted at
+              <a href="mailto:organizers@pycon.ca">organizers@pycon.ca</a>.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              The board can be contacted privately at <a href="mailto:board@pycon.ca">board@pycon.ca</a>.
+            {% endblocktrans %}
+          </li>
+          <li>
+            {% blocktrans %}
+              You can also find us on: <a href="https://github.com/pyconca/">github.com/pyconca/</a>.
+            {% endblocktrans %}
+          </li>
+        </ul>
+
+        <div class="c-block-text c-block-text-md">
+          {% include 'components/svgs/separator.html' %}
+        </div>
+
+
+      </div>
+      <div class="col-md-6">
+        <a class="twitter-timeline" data-width="600" data-height="600" data-theme="light" data-link-color="#f06461"
+           href="https://twitter.com/pyconca">Tweets by pyconca</a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+
+        <h2>Organizers</h2>
+
+        <p class="lead">
+          {% for p, link in ORGANIZERS %}
+            <a href="{{ link }}">{{ p }}</a> {% if not forloop.last %}•{% endif %}
+          {% endfor %}
+        </p>
+      </div>
     </div>
   </div>
 
-  <div class="container">
-
-    <h2>Organizers</h2>
-
-    <p class="lead">
-      {% for p, link in ORGANIZERS %}
-        <a href="{{ link }}">{{ p }}</a> {% if not forloop.last %}•{% endif %}
-      {% endfor %}
-    </p>
-  </div>
 
 {% endblock %}
