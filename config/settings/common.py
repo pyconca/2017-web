@@ -68,6 +68,7 @@ LOCAL_APPS = (
     # Your stuff: custom apps go here
     'pyconca2017.pycon_proposals',
     'pyconca2017.pycon_proposals.templatetags',
+    'pyconca2017.pycon_sponsors',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -213,6 +214,7 @@ STATIC_URL = '/static/'
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = (
     str(APPS_DIR.path('static')),
+    # str(APPS_DIR.path('../../2017-patterns/dist/assets')),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
