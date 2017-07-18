@@ -20,12 +20,11 @@ html, body {
     display: inline-block;
     float: none;
     width: 100%; }
-
   .navbar-nav .nav-item + .nav-item {
     margin-left: 0; }
-
   .nav.navbar-nav.pull-xs-right {
     float: none !important; } }
+
 [hidden][style="display: block;"] {
   display: block !important; }
 
@@ -74,12 +73,7 @@ html, body {
 .home-container {
   width: 100%;
   background: linear-gradient(to bottom, rgba(245, 245, 245, 0.5) 0%, whitesmoke 100%), url("../toolkit/images/hero/pycon-2015-crowd-by-shiroyuki-orig.jpg") center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover; }
 
 .home-logo {
   width: 40%; }
-
-/*# sourceMappingURL=project.css.map */
