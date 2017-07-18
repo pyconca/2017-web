@@ -357,8 +357,8 @@ msgstr "Montréal"
 
 #: pyconca2017/templates/components/layout/header.html:11
 #: pyconca2017/templates/pages/home.html:12
-msgid "November 12-15, 2017"
-msgstr "12-15 Novembre 2017"
+msgid "November 18-19, 2017"
+msgstr "18-19 Novembre 2017"
 
 #: pyconca2017/templates/dashboard.html:16
 msgid "Speaking"
@@ -447,10 +447,10 @@ msgstr "Où Se Déroule L'évènement"
 
 #: pyconca2017/templates/pages/home.html:51
 msgid ""
-"This year, PyCon Canada will be held November 12-15, 2017 in Montreal, "
+"This year, PyCon Canada will be held November 18-19, 2017 in Montreal, "
 "Quebec, Canada."
 msgstr ""
-"Cette année, PyCon Canada se tiendra du 12 au 15 novembre 2017 à Montréal, "
+"Cette année, PyCon Canada se tiendra du 18 au 19 novembre 2017 à Montréal, "
 "Québec, Canada."
 
 #: pyconca2017/templates/pages/home.html:70
