@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: pyconca2017/templates/pages/sponsors.html:16
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 21:43-0400\n"
+"POT-Creation-Date: 2017-07-18 00:21-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -18,11 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: config/settings/common.py:150
+#: config/settings/common.py:151
 msgid "English"
 msgstr "Anglais"
 
-#: config/settings/common.py:151
+#: config/settings/common.py:152
 msgid "French"
 msgstr "Français"
 
@@ -50,6 +51,18 @@ msgstr ""
 #| msgid "Information"
 msgid "Duration"
 msgstr "Information"
+
+#: pyconca2017/pycon_sponsors/models.py:32
+msgid "Logo EN"
+msgstr ""
+
+#: pyconca2017/pycon_sponsors/models.py:33
+msgid "Logo FR"
+msgstr ""
+
+#: pyconca2017/pycon_sponsors/models.py:36
+msgid "Internal note"
+msgstr ""
 
 #: pyconca2017/templates/account/account_inactive.html:5
 #: pyconca2017/templates/account/account_inactive.html:8
@@ -317,38 +330,48 @@ msgstr ""
 "PyCon Canada, pour une fin de semaine de pr&eacute;sentations, d&#x27;"
 "activit&eacute;s, de programmation et de plaisir!"
 
-#: pyconca2017/templates/components/layout/footer.html:7
+#: pyconca2017/templates/components/layout/footer.html:6
 msgid "Event"
 msgstr "Évènement"
 
-#: pyconca2017/templates/components/layout/footer.html:24
+#: pyconca2017/templates/components/layout/footer.html:23
 #: pyconca2017/templates/components/layout/header.html:18
 msgid "About"
 msgstr "À propos"
 
-#: pyconca2017/templates/components/layout/footer.html:37
+#: pyconca2017/templates/components/layout/footer.html:29
+#: pyconca2017/templates/components/layout/header.html:24
+msgid "Sponsors"
+msgstr "Commanditaires"
+
+#: pyconca2017/templates/components/layout/footer.html:36
 msgid "Participate"
 msgstr "Participer"
 
-#: pyconca2017/templates/components/layout/footer.html:48
+#: pyconca2017/templates/components/layout/footer.html:47
 msgid "Newsletter"
 msgstr "Infolettre"
 
-#: pyconca2017/templates/components/layout/footer.html:61
+#: pyconca2017/templates/components/layout/footer.html:60
 msgid "Information"
 msgstr "Information"
 
-#: pyconca2017/templates/components/layout/footer.html:66
+#: pyconca2017/templates/components/layout/footer.html:65
 msgid "Code of conduct"
 msgstr "Code de conduite"
 
-#: pyconca2017/templates/components/layout/footer.html:72
+#: pyconca2017/templates/components/layout/footer.html:71
 msgid "Contact"
 msgstr "Contact"
 
-#: pyconca2017/templates/components/layout/footer.html:79
+#: pyconca2017/templates/components/layout/footer.html:78
 msgid "Follow us"
 msgstr "Suivez-nous"
+
+#: pyconca2017/templates/components/layout/footer_sponsors.html:4
+#: pyconca2017/templates/pages/sponsors.html:12
+msgid "Our Sponsors"
+msgstr "Nos commanditaires"
 
 #: pyconca2017/templates/components/layout/header.html:10
 msgid "Montréal"
@@ -494,9 +517,20 @@ msgstr "Recevez tous les détails de l'événement dès qu'ils sont disponibles"
 msgid "Subscribe"
 msgstr "Souscrire"
 
-#: pyconca2017/templates/pages/sponsors.html:7
-msgid "Sponsors are coming soon"
-msgstr "Les commanditaires arrivent bientôt"
+#: pyconca2017/templates/pages/sponsors.html:17
+msgid ""
+"\n"
+"          We thank our fantastic sponsors who help make this event "
+"possible.\n"
+"          <a href=\"mailto:sponsorship@pycon.ca\">Get in touch</a> if your "
+"organization would like to support PyCon Canada\n"
+"          2016.\n"
+"        "
+msgstr ""
+"\n"
+"Nous remercions nos merveilleux commanditaires qui rendre cet événement "
+"possible. <a href=\"mailto:sponsorship@pycon.ca\">Contactez-nous</a> si "
+"votre organisation aimerait aider PyCon Canada 2016."
 
 #: pyconca2017/templates/pages/volunteer.html:9
 msgid "Volunteering at PyCon Canada 2017"
@@ -973,3 +1007,6 @@ msgstr ""
 #: pyconca2017/utils/models.py:13
 msgid "date updated"
 msgstr ""
+
+#~ msgid "Sponsors are coming soon"
+#~ msgstr "Les commanditaires arrivent bientôt"
