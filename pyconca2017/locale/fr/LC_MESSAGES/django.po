@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-15 21:33-0400\n"
+"POT-Creation-Date: 2017-07-17 21:43-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -304,19 +304,18 @@ msgid ""
 "mail address</a>."
 msgstr ""
 
-#: pyconca2017/templates/base.html:7 pyconca2017/templates/base.html:17
+#: pyconca2017/templates/base.html:7 pyconca2017/templates/base.html:20
 msgid "PyCon Canada 2017"
 msgstr ""
 
-#: pyconca2017/templates/base.html:10 pyconca2017/templates/base.html:19
+#: pyconca2017/templates/base.html:10 pyconca2017/templates/base.html:22
 msgid ""
 "Join your fellow Pythonistas for the fourth annual PyCon Canada, a weekend "
 "of talks, activities, fun and code!"
 msgstr ""
-"Joignez-vous &agrave; la communaut&eacute; Python lors du "
-"quatri&egrave;me PyCon Canada, pour une fin de semaine de "
-"pr&eacute;sentations, d&#x27;activit&eacute;s, de programmation et de "
-"plaisir!"
+"Joignez-vous &agrave; la communaut&eacute; Python lors du quatri&egrave;me "
+"PyCon Canada, pour une fin de semaine de pr&eacute;sentations, d&#x27;"
+"activit&eacute;s, de programmation et de plaisir!"
 
 #: pyconca2017/templates/components/layout/footer.html:7
 msgid "Event"
@@ -377,61 +376,91 @@ msgstr ""
 msgid "is an initiative to strengthen the Canadian Python community."
 msgstr "a pour but de renforcer la communauté Python canadienne."
 
-#: pyconca2017/templates/pages/about.html:28
+#: pyconca2017/templates/pages/about.html:30
 msgid "Join the Conversation"
 msgstr "Joignez-vous à la conversation"
 
-#: pyconca2017/templates/pages/about.html:31
+#: pyconca2017/templates/pages/about.html:33
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                Be sure to use <a href=\"https://twitter.com/intent/tweet?"
+#| "button_hashtag=PyConCA2017\">#PyConCA2017</a>.\n"
+#| "                We love hearing from our community members!\n"
+#| "              "
 msgid ""
 "\n"
-"                Be sure to use <a href=\"https://twitter.com/intent/tweet?"
+"            Be sure to use <a href=\"https://twitter.com/intent/tweet?"
 "button_hashtag=PyConCA2017\">#PyConCA2017</a>.\n"
-"                We love hearing from our community members!\n"
-"              "
+"            We love hearing from our community members!\n"
+"          "
 msgstr ""
 "\n"
 "                Assurez-vous d'utiliser <a href=\"https://twitter.com/intent/"
 "tweet?button_hashtag=PyConCA2017\">#pyconca2017</a>.                Nous "
 "aimons recevoir des nouvelles de la communauté!"
 
-#: pyconca2017/templates/pages/about.html:41
+#: pyconca2017/templates/pages/about.html:43
 msgid "Key Contacts"
 msgstr "Contacts clés"
 
-#: pyconca2017/templates/pages/about.html:45
+#: pyconca2017/templates/pages/about.html:47
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                  The organizing committee can be contacted at\n"
+#| "                  <a href=\"mailto:organizers@pycon.ca\">organizers@pycon."
+#| "ca</a>.\n"
+#| "                "
 msgid ""
 "\n"
-"                  The organizing committee can be contacted at\n"
-"                  <a href=\"mailto:organizers@pycon.ca\">organizers@pycon."
-"ca</a>.\n"
-"                "
+"              The organizing committee can be contacted at\n"
+"              <a href=\"mailto:organizers@pycon.ca\">organizers@pycon.ca</"
+"a>.\n"
+"            "
 msgstr ""
 "\n"
 "                  Le comité organisateur peut être rejoint "
 "à                   <a href=\"mailto:organizers@pycon.ca\">organizers@pycon."
 "ca</a>."
 
-#: pyconca2017/templates/pages/about.html:51
+#: pyconca2017/templates/pages/about.html:53
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                  The board can be contacted privately at <a href="
+#| "\"mailto:board@pycon.ca\">board@pycon.ca</a>.\n"
+#| "                "
 msgid ""
 "\n"
-"                  The board can be contacted privately at <a href=\"mailto:"
+"              The board can be contacted privately at <a href=\"mailto:"
 "board@pycon.ca\">board@pycon.ca</a>.\n"
-"                "
+"            "
 msgstr ""
 "\n"
 "                  Le conseil d'administration peut être rejoint à <a href="
 "\"mailto:board@pycon.ca\">board@pycon.ca</a>."
 
-#: pyconca2017/templates/pages/about.html:56
+#: pyconca2017/templates/pages/about.html:58
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                  You can also find us on: <a href=\"https://github.com/"
+#| "pyconca/\">github.com/pyconca/</a>.\n"
+#| "                "
 msgid ""
 "\n"
-"                  You can also find us on: <a href=\"https://github.com/"
-"pyconca/\">github.com/pyconca/</a>.\n"
-"                "
+"              You can also find us on: <a href=\"https://github.com/pyconca/"
+"\">github.com/pyconca/</a>.\n"
+"            "
 msgstr ""
 "\n"
 "Vous pouvez également nous trouver: <a href=\"https://github.com/pyconca/"
 "\">github.com/pyconca/</a>."
+
+#: pyconca2017/templates/pages/about.html:79
+msgid "Organizers"
+msgstr "Les organisateurs"
 
 #: pyconca2017/templates/pages/code_of_conduct.html:10
 msgid ""
