@@ -70,3 +70,6 @@ staticfiles/
 
 # Secrets
 secret.yml
+
+# Fabric Stuff
+release.tar.gz

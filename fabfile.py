@@ -51,7 +51,6 @@ def staging():
 
 @task
 def production():
-    raise Exception('Not yet, cowboy')
     env.environment = 'production'
 
     yell(magenta('Configuring {} environment...'.format(env.environment)))
@@ -158,5 +157,3 @@ def get_and_render_template(filename, context):
     jinja_env = Environment(loader=FileSystemLoader('utility/scripts'))
     tmpl = jinja_env.get_template(filename)
     return StringIO(tmpl.render(context))
-
-
