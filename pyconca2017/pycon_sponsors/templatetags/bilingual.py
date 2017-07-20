@@ -16,5 +16,9 @@ def bilingual(obj, field, attr=None):
         value = getattr(obj, '%s_en' % field, None)
 
     if attr:
-        return getattr(value, attr, None)
-    return value
+        try:
+            return getattr(value, attr, '')
+        except ValueError:
+            pass
+
+    return value or ''

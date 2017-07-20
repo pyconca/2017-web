@@ -21,12 +21,12 @@ class PySponsorLevel(models.Model):
 
 class PySponsor(models.Model):
 
-    title_en = models.CharField(max_length=255, blank=True, default='')
-    title_fr = models.CharField(max_length=255, blank=True, default='')
+    name_en = models.CharField(max_length=255, blank=True, default='')
+    name_fr = models.CharField(max_length=255, blank=True, default='')
     description_en = models.TextField(blank=True, default='')
     description_fr = models.TextField(blank=True, default='')
-    twitter_username_en = models.CharField(max_length=255, blank=True, default='')
-    twitter_username_fr = models.CharField(max_length=255, blank=True, default='')
+    twitter_username_en = models.CharField(max_length=255, blank=True, null=True)
+    twitter_username_fr = models.CharField(max_length=255, blank=True, null=True)
     url_en = models.URLField(blank=True, null=True)
     url_fr = models.URLField(blank=True, null=True)
     logo_en = models.FileField(_("Logo EN"), blank=True, upload_to="sponsor_files")
@@ -43,7 +43,7 @@ class PySponsor(models.Model):
         ordering = ('order',)
 
     def __str__(self):
-        return self.title_en
+        return self.name_en
 
     @property
     def twitter_url_en(self):

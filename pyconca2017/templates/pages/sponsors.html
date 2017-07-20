@@ -31,12 +31,12 @@
             {% bilingual sponsor 'logo' as logo %}
             {% if logo %}
               <a href="{% bilingual sponsor 'url' %}" target="_blank">
-                <img src="{{ logo.url }}" alt="{% bilingual sponsor 'title' %}" class="img-responsive"
+                <img src="{{ logo.url }}" alt="{% bilingual sponsor 'name' %}" class="img-responsive"
                      style="max-width: 100%"/>
               </a>
             {% else %}
               <h1 class="text-center"><a href="{% bilingual sponsor 'url' %}"
-                                         target="_blank">{% bilingual sponsor 'title' %}</a></h1>
+                                         target="_blank">{% bilingual sponsor 'name' %}</a></h1>
             {% endif %}
             {% bilingual sponsor 'twitter_username' as twitter_username %}
             {% if twitter_username %}
