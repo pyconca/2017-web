@@ -21,6 +21,9 @@ django-bootstrap-form==3.2.1
 # Models
 django-model-utils==2.6.1
 
+# Django extensions
+django-extensions==1.7.6
+
 # Images
 Pillow==4.0.0
 easy-thumbnails==2.4.1
