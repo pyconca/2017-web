@@ -59,6 +59,7 @@ THIRD_PARTY_APPS = (
     "markitup",
     "django_bleach",
     "easy_thumbnails",
+    "django_extensions",
 )
 
 # Apps specific for this project go here.
@@ -214,7 +215,6 @@ STATIC_URL = '/static/'
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = (
     str(APPS_DIR.path('static')),
-    # str(APPS_DIR.path('../../2017-patterns/dist/assets')),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
