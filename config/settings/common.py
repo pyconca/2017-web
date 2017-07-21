@@ -59,6 +59,7 @@ THIRD_PARTY_APPS = (
     "markitup",
     "django_bleach",
     "easy_thumbnails",
+    "django_extensions",
 )
 
 # Apps specific for this project go here.
@@ -68,6 +69,7 @@ LOCAL_APPS = (
     # Your stuff: custom apps go here
     'pyconca2017.pycon_proposals',
     'pyconca2017.pycon_proposals.templatetags',
+    'pyconca2017.pycon_sponsors',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

@@ -27,6 +27,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY', default='yas%wsbwc7mqt#z1i5+s*2ut4#^+_^@%y
 
 # Mail settings
 # ------------------------------------------------------------------------------
+# ACCOUNT_EMAIL_REQUIRED = False
 
 EMAIL_PORT = 1025
 
@@ -61,10 +62,6 @@ DEBUG_TOOLBAR_CONFIG = {
     ],
     'SHOW_TEMPLATE_CONTEXT': True,
 }
-
-# django-extensions
-# ------------------------------------------------------------------------------
-INSTALLED_APPS += ('django_extensions', )
 
 # TESTING
 # ------------------------------------------------------------------------------
