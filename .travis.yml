@@ -9,4 +9,8 @@ before_install:
 language: python
 python:
 - "3.5"
+notifiations:
+  slack:
+    rooms:
+      - pyconca:wB7ARX12o9Jtc2SCnV7g1hg2@e#website
 
