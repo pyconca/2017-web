@@ -37,7 +37,7 @@ def staging():
     env.hosts = ['portland.pynorth.org']
     env.site_hostname = 'staging.2017.pycon.ca'
     env.root = '/srv/www/pycon.ca/staging.2017/django'
-    env.branch = 'development'
+    env.branch = 'master'
     env.db_name = 'pycon2017_staging'
     env.workers = 1
     env.allowed_hosts = 'staging.2017.pycon.ca'
@@ -126,6 +126,10 @@ def deploy():
             run('%(virtualenv_root)s/bin/python manage.py migrate --noinput' % env)
             run('%(virtualenv_root)s/bin/python manage.py pycon_start' % env)
             run('%(virtualenv_root)s/bin/python manage.py create_review_permissions' % env)
+
+        yell(magenta("bootstrap environment..."))
+        put(get_and_render_template('template.env', env),
+            os.path.join(env.run_root, '.env'), use_sudo=True)
 
         yell(magenta("gunicorn entry script..."))
         put(get_and_render_template('gunicorn_run.sh', env),
