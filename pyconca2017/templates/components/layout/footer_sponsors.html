@@ -7,7 +7,7 @@
     {% for sponsor in SPONSORS %}
       {% bilingual sponsor 'logo' as logo %}
       <a href="{% bilingual sponsor 'url' %}" target="_blank" class="c-foot__sponsor-link">
-        <img class="c-foot__sponsor-image" src="{% thumbnail logo "150x150" %}"
+        <img class="c-foot__sponsor-image" src="{{ logo.url }}"
              alt="{% bilingual sponsor 'name' %}">
       </a>
     {% endfor %}
