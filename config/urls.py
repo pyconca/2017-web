@@ -18,7 +18,8 @@ urlpatterns = [
     url(r'^volunteer/$', TemplateView.as_view(template_name='pages/volunteer.html'), name='volunteer'),
     url(r'^sponsors/$', include('pyconca2017.pycon_sponsors.urls', namespace='sponsors')),
     url(r'^schedule/$', TemplateView.as_view(template_name='pages/schedule.html'), name='schedule'),
-    url(r'^code-of-conduct/$', TemplateView.as_view(template_name='pages/code_of_conduct.html'), name='code-of-conduct'),
+    url(r'^code-of-conduct/$', TemplateView.as_view(template_name='pages/code_of_conduct.html'),
+        name='code-of-conduct'),
 
     # Django Admin, use {% url 'admin:index' %}
     url(settings.ADMIN_URL, admin.site.urls),
