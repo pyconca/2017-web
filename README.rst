@@ -25,7 +25,6 @@ Setup
     $ pip install --upgrade -r requirements/local.txt
     $ export DJANGO_SETTINGS_MODULE=config.settings.local
     $ python manage.py migrate
-    $ python manage.py pycon_start
     $ python manage.py runserver
 
 
