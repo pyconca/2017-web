@@ -11,4 +11,8 @@ python:
   - "3.5"
 install: "pip install -r requirements/test.txt"
 script: py.test --flake8 --cov pyconca2017 --cov-report term:skip-covered
+notifiations:
+  slack:
+    rooms:
+      - pyconca:wB7ARX12o9Jtc2SCnV7g1hg2@e#website
 
