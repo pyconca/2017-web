@@ -124,8 +124,6 @@ def deploy():
 
             yell(magenta("Migrate and Update the database..."))
             run('%(virtualenv_root)s/bin/python manage.py migrate --noinput' % env)
-            run('%(virtualenv_root)s/bin/python manage.py pycon_start' % env)
-            run('%(virtualenv_root)s/bin/python manage.py create_review_permissions' % env)
 
         yell(magenta("bootstrap environment..."))
         put(get_and_render_template('template.env', env),

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-18 00:21-0400\n"
+"POT-Creation-Date: 2017-07-21 23:36-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -19,38 +19,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: config/settings/common.py:151
+#: config/settings/common.py:137
 msgid "English"
 msgstr "Anglais"
 
-#: config/settings/common.py:152
+#: config/settings/common.py:138
 msgid "French"
 msgstr "Français"
-
-#: pyconca2017/pycon_proposals/models.py:34
-msgid "Have you given this talk before?"
-msgstr ""
-
-#: pyconca2017/pycon_proposals/models.py:35
-msgid "Previously given"
-msgstr ""
-
-#: pyconca2017/pycon_proposals/models.py:38
-msgid ""
-"Would you be interested in receiving mentorship / input on your talk in "
-"advance?"
-msgstr ""
-
-#: pyconca2017/pycon_proposals/models.py:40
-msgid "Speaker mentorship"
-msgstr ""
-
-#: pyconca2017/pycon_proposals/models.py:54
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:16
-#, fuzzy
-#| msgid "Information"
-msgid "Duration"
-msgstr "Information"
 
 #: pyconca2017/pycon_sponsors/models.py:32
 msgid "Logo EN"
@@ -387,7 +362,6 @@ msgid "Speaking"
 msgstr ""
 
 #: pyconca2017/templates/dashboard.html:135
-#: pyconca2017/templates/symposion/reviews/review_detail.html:75
 msgid "Reviews"
 msgstr ""
 
@@ -549,454 +523,7 @@ msgid ""
 "          "
 msgstr ""
 
-#: pyconca2017/templates/symposion/cms/page_edit.html:11
-msgid "Edit page at:"
-msgstr ""
-
-#: pyconca2017/templates/symposion/conference/user_list.html:57
-msgid "Email"
-msgstr ""
-
-#: pyconca2017/templates/symposion/conference/user_list.html:58
-msgid "Name"
-msgstr ""
-
-#: pyconca2017/templates/symposion/conference/user_list.html:59
-msgid "Speaker Profile?"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/proposal_new_message/message.html:5
-#, python-format
-msgid "<b>%(user)s</b> has added a message on <b>%(title)s</b>."
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/proposal_new_message/message.html:12
-#, python-format
-msgid ""
-" Respond online at <a href=\"http://%(current_site)s%(detail_url)s#proposal-"
-"feedback\">http://%(current_site)s%(detail_url)s#proposal-feedback</a>"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/proposal_new_message/subject.txt:1
-#, python-format
-msgid "New message on \"%(title)s\" from %(user)s"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/proposal_updated/message.html:5
-#, python-format
-msgid ""
-"<b>%(username)s</b> has made changes to <b>%(title)s</b> which you have "
-"previously reviewed or commented on."
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/proposal_updated/message.html:9
-#, python-format
-msgid ""
-"View the latest version of the proposal online at <a href=\"http://"
-"%(current_site)s%(detail_url)s\">http://%(current_site)s%(detail_url)s</a>"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/proposal_updated/subject.txt:1
-#, python-format
-msgid "\"%(title)s\" has been updated by %(username)s"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/speaker_addition/message.html:3
-#, python-format
-msgid ""
-"\n"
-"<p>%(username)s attached you as an additional speaker to a\n"
-"    talk proposal for %(site_name)s entitled \"%(title)s\".</p>\n"
-"\n"
-"<p>For more details, visit the %(site_name)s speaker dashboard:\n"
-"    <a href=\"http://%(current_site)s%(dashboard_url)s\">http://"
-"%(current_site)s%(dashboard_url)s</a>\n"
-"</p>\n"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/speaker_addition/subject.txt:1
-#: pyconca2017/templates/symposion/emails/speaker_invite/subject.txt:1
-#: pyconca2017/templates/symposion/emails/speaker_no_profile/subject.txt:1
-#, python-format
-msgid "%(name)s has invited you to join as a speaker on %(title)s"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/speaker_invite/message.html:3
-#, python-format
-msgid ""
-"\n"
-"<p>%(invitator)s attached you as an additional speaker to a\n"
-"    talk proposal for %(site_name)s entitled \"%(title)s\".</p>\n"
-"\n"
-"<p>Go to</p>\n"
-"\n"
-"<p><a href=\"http://%(current_site)s%(token_url)s\">http://%(current_site)s"
-"%(token_url)s</a></p>\n"
-"\n"
-"<p>to confirm.</p>\n"
-"\n"
-"<p>If you don't have account on the website, you will be asked to create one."
-"</p>\n"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/speaker_no_profile/message.html:3
-#, python-format
-msgid ""
-"\n"
-"<p>%(username)s attached you as an additional speaker to a\n"
-"    talk proposal for %(site_name)s entitled \"%(title)s\".</p>\n"
-"\n"
-"<p>Go to</p>\n"
-"\n"
-"<p><a href=\"http://%(current_site)s%(token_url)s\">http://%(current_site)s"
-"%(token_url)s</a></p>\n"
-"\n"
-"<p>to confirm and fill out your speaker profile.</p>\n"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/sponsor_signup/message.html:2
-#, python-format
-msgid ""
-"\n"
-"<p>%(sponsor_name)s has applied to be a sponsor.</p>\n"
-"\n"
-"<ul>\n"
-"    <li><b>Applicant</b>: %(applicant)s</li>\n"
-"    <li><b>Sponsor Name</b>: %(sponsor_name)s</li>\n"
-"    <li><b>Sponsor Contact</b>: %(contact)s</li>\n"
-"    <li><b>Sponsor Contact Email</b>: %(email)s</li>\n"
-"    <li><b>Sponsorship Level</b>: %(level)s</li>\n"
-"</ul>\n"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/sponsor_signup/subject.txt:1
-msgid "New Sponsor Application"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/teams_user_applied/message.html:3
-#, python-format
-msgid ""
-"\n"
-"    <p>\n"
-"        User \"%(username)s\" has applied to join <b>%(team_name)s</b> on "
-"%(site_name)s.\n"
-"    </p>\n"
-"\n"
-"    <p>\n"
-"        To accept this application and see any other pending applications, "
-"visit the following url:\n"
-"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s"
-"%(team_url)s</a>\n"
-"    </p>\n"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/teams_user_applied/subject.txt:1
-#, python-format
-msgid "%(username)s has applied to to join \"%(team)s\""
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/teams_user_invited/message.html:3
-#, python-format
-msgid ""
-"\n"
-"    <p>\n"
-"        You have been invited to join <b>%(team_name)s</b> on "
-"%(site_name)s.\n"
-"    </p>\n"
-"\n"
-"    <p>\n"
-"        To accept this invitation, visit the following url:\n"
-"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s"
-"%(team_url)s</a>\n"
-"    </p>\n"
-msgstr ""
-
-#: pyconca2017/templates/symposion/emails/teams_user_invited/subject.txt:1
-#, python-format
-msgid "You have been invited to join \"%(team)s\""
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_pending_proposal_row.html:12
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:26
-msgid "Cancelled"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_pending_proposal_row.html:16
-msgid "Accepted"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_pending_proposal_row.html:18
-msgid "Submitted"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_pending_proposal_row.html:21
-msgid "Invited"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_pending_proposal_row.html:30
-msgid "Choose Response"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_pending_proposal_row.html:35
-msgid "Accept invitation"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_pending_proposal_row.html:37
-msgid "Decline invitation"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:6
-msgid "Submitted by"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:10
-msgid "Track"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:13
-msgid "Audience Level"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:19
-msgid "Tutorial"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:22
-msgid "Given before"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:26
-msgid "Additional Speakers"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:33
-msgid "Invitation Sent"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:40
-#, fuzzy
-#| msgid "Information"
-msgid "Description"
-msgstr "Information"
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:43
-msgid "Abstract"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:46
-msgid "Notes"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:50
-msgid "Speaker Bio"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/_proposal_fields.html:54
-msgid "Documents"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_cancel.html:5
-msgid "Cancel Proposal"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_cancel.html:14
-msgid "No, keep it for now"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:15
-msgid "Edit this proposal"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:18
-msgid "Cancel this proposal"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:22
-msgid "Remove me from this proposal"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:34
-#: pyconca2017/templates/symposion/reviews/review_detail.html:74
-msgid "Proposal Details"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:36
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:48
-msgid "Supporting Documents"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:39
-msgid "Reviewer Feedback"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:58
-msgid "delete"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:65
-msgid "No supporting documents attached to this proposal."
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:67
-msgid "Add Document"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:74
-msgid "Conversation with Reviewers"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:84
-msgid "Leave a Message"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:86
-msgid "You can leave a message for the reviewers here."
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_detail.html:94
-msgid "Submit"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_speaker_manage.html:7
-msgid "Proposal:"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_speaker_manage.html:10
-msgid "Edit proposal"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_speaker_manage.html:14
-msgid "Current Speakers"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_speaker_manage.html:20
-msgid "pending invitation"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_speaker_manage.html:24
-msgid "Add another speaker"
-msgstr ""
-
-#: pyconca2017/templates/symposion/proposals/proposal_submit.html:6
-msgid "Submit A Proposal"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/_review_table.html:6
-#: pyconca2017/templates/symposion/reviews/result_notification.html:45
-msgid "Speaker / Title"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/_review_table.html:7
-#: pyconca2017/templates/symposion/reviews/result_notification.html:46
-msgid "Category"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/_review_table.html:9
-msgid "+1"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/_review_table.html:10
-msgid "+0"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/_review_table.html:11
-msgid "-0"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/_review_table.html:12
-msgid "-1"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/_review_table.html:13
-msgid "Your Rating"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/base.html:64
-msgid "All Reviews"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/base.html:77
-msgid "Voting Status"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/result_notification.html:47
-msgid "Status"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/result_notification.html:48
-msgid "Notified?"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/review_detail.html:76
-msgid "Speaker Feedback"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/review_detail.html:84
-msgid "Current Results"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/review_detail.html:91
-msgid "Total Responses"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/review_detail.html:109
-msgid "Submit Review"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/review_detail.html:151
-msgid "Conversation with the submitter"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/review_detail.html:165
-msgid "Send a message"
-msgstr ""
-
-#: pyconca2017/templates/symposion/reviews/review_detail.html:167
-msgid ""
-"\n"
-"                            If you'd like to communicate with the submitter, "
-"use the following form and he or she will be\n"
-"                            notified and given the opportunity to respond.\n"
-"                        "
-msgstr ""
-
-#: pyconca2017/templates/symposion/schedule/_slot_edit.html:5
-msgid "Edit Slot"
-msgstr ""
-
-#: pyconca2017/templates/symposion/speakers/speaker_create.html:7
-#: pyconca2017/templates/symposion/speakers/speaker_create.html:18
-msgid "Create Speaker Profile"
-msgstr ""
-
-#: pyconca2017/templates/symposion/speakers/speaker_edit.html:7
-#: pyconca2017/templates/symposion/speakers/speaker_edit.html:14
-msgid "Edit Speaker Profile"
-msgstr ""
-
-#: pyconca2017/templates/symposion/sponsorship/add.html:7
-#: pyconca2017/templates/symposion/sponsorship/add.html:14
-msgid "Add a Sponsor"
-msgstr ""
-
-#: pyconca2017/templates/symposion/sponsorship/apply.html:7
-msgid "Apply to be a Sponsor"
-msgstr ""
-
-#: pyconca2017/templates/symposion/sponsorship/apply.html:17
-msgid "Apply to Be a Sponsor"
-msgstr ""
-
-#: pyconca2017/templates/symposion/sponsorship/detail.html:8
-msgid "Sponsorship"
-msgstr ""
-
-#: pyconca2017/templates/symposion/sponsorship/list.html:7
-#: pyconca2017/templates/symposion/sponsorship/list.html:12
-msgid "About Our Sponsors"
-msgstr ""
-
-#: pyconca2017/users/models.py:18
+#: pyconca2017/users/models.py:17
 msgid "Name of User"
 msgstr ""
 
@@ -1007,6 +534,16 @@ msgstr ""
 #: pyconca2017/utils/models.py:13
 msgid "date updated"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Information"
+#~ msgid "Duration"
+#~ msgstr "Information"
+
+#, fuzzy
+#~| msgid "Information"
+#~ msgid "Description"
+#~ msgstr "Information"
 
 #~ msgid "Sponsors are coming soon"
 #~ msgstr "Les commanditaires arrivent bientôt"
