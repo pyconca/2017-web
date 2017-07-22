@@ -33,12 +33,6 @@ urlpatterns = [
 
 ]
 
-# Symposion
-if settings.CFP_APP_ON:
-    urlpatterns += [
-        url(r'^cfp/', include('pyconca2017.pycon_proposals.urls')),
-    ]
-
 # Static
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

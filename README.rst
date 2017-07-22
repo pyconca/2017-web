@@ -43,16 +43,6 @@ Setting Up Your Users
 
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
 
-Setting Up Conference
-^^^^^^^^^^^^^^^^^^^^^
-
-For quick start run
-
-    $ python manage.py pycon_start
-
-This command will setup conference, sections, and other basic configuration. The setup configuration is defined in the
-`pyconca2017/pycon_proposals/management/commands/pycon_start.py`.
-
 Test coverage
 ^^^^^^^^^^^^^
 

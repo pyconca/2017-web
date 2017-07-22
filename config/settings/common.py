@@ -45,18 +45,7 @@ THIRD_PARTY_APPS = (
     'allauth.socialaccount',  # registration
     'allauth.socialaccount.providers.github',
 
-    # symposion
-    "symposion",
-    "symposion.conference",
-    "symposion.proposals",
-    "symposion.reviews",
-    "symposion.schedule",
-    "symposion.speakers",
-    "symposion.sponsorship",
-    "symposion.teams",
-
     "bootstrapform",
-    "markitup",
     "django_bleach",
     "easy_thumbnails",
     "django_extensions",
@@ -64,11 +53,7 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    # custom users app
     'pyconca2017.users.apps.UsersConfig',
-    # Your stuff: custom apps go here
-    'pyconca2017.pycon_proposals',
-    'pyconca2017.pycon_proposals.templatetags',
     'pyconca2017.pycon_sponsors',
 )
 
@@ -193,8 +178,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
-                'symposion.reviews.context_processors.reviews',
-                'pyconca2017.pycon_proposals.context_processors.conference_context',
+                'pyconca2017.context_processors.conference_context',
                 # Your stuff: custom template context processors go here
             ],
         },
@@ -263,7 +247,6 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
-    "symposion.teams.backends.TeamPermissionsBackend",
 )
 
 # Some really nice defaults
@@ -302,18 +285,3 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
-
-# Symposion
-CFP_APP_ON = False  # do not expose
-
-CONFERENCE_ID = 1
-SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/"
-PROPOSAL_FORMS = {
-    "tutorial": "pyconca2017.pycon_proposals.forms.TutorialProposalForm",
-    "talk": "pyconca2017.pycon_proposals.forms.TalkProposalForm",
-}
-
-
-MARKITUP_SET = "markitup/sets/markdown"
-MARKITUP_FILTER = ["symposion.markdown_parser.parse", {}]
-MARKITUP_SKIN = "markitup/skins/simple"
