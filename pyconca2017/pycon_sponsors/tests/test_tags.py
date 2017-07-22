@@ -21,6 +21,13 @@ class TestBilingualTags(TestCase):
         rendered = self.template.render(Context({'obj': self.sponsor}, ))
         self.assertEqual(rendered, 'Demo FR')
 
+    def test_renders_defaults_to_english(self):
+        translation.activate('fr')
+        sponsor = SponsorFactory(twitter_username_fr=None)
+        template = Template("{% load bilingual %}{% bilingual obj 'twitter_username' %}")
+        rendered = template.render(Context({'obj': sponsor}, ))
+        self.assertEqual(rendered, 'demo_en')
+
     def test_renders_invalid_field(self):
         template = Template("{% load bilingual %}{% bilingual obj 'foobar' %}")
         rendered = template.render(Context({'obj': self.sponsor}))
