@@ -11,8 +11,6 @@ from symposion.conference.models import Conference, Section
 from symposion.proposals.models import ProposalKind, ProposalSection
 from symposion.teams.models import Team
 
-from pyconca2017.pycon_proposals.models import TalkProposal, TutorialProposal
-
 data = {
     'title': 'PyCon Canada 2017',
     'start_date': date(2017, 11, 18),
@@ -55,18 +53,18 @@ data = {
     }],
 
     'teams': [{
-                  'slug': 'reviewers',
-                  'name': 'Reviewers',
-                  'description': 'Review committee.',
-                  'access': 'invitation',
-                  'permissions': ['can_review_talks', ]
-              }, {
-                  'slug': 'organizers',
-                  'name': 'Core organizers',
-                  'description': 'Core organizing committee.',
-                  'access': 'invitation',
-                  'permissions': ['can_review_talks', 'can_review_unbiased', 'can_manage_talks']
-              }]
+        'slug': 'reviewers',
+        'name': 'Reviewers',
+        'description': 'Review committee.',
+        'access': 'invitation',
+        'permissions': ['can_review_talks', ]
+    }, {
+        'slug': 'organizers',
+        'name': 'Core organizers',
+        'description': 'Core organizing committee.',
+        'access': 'invitation',
+        'permissions': ['can_review_talks', 'can_review_unbiased', 'can_manage_talks']
+    }]
 }
 
 
