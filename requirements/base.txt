@@ -43,9 +43,7 @@ pytz==2016.10
 django-redis==4.7.0
 redis>=2.10.5
 
-
-
-
+Markdown==2.6.8
 rcssmin==1.0.6
 django-compressor==2.1
 django-bleach==0.3.0
