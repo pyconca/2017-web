@@ -1,101 +1,99 @@
 {% load i18n %}
 
-<footer class="c-foot">
-  <div class="c-foot__navigation">
-    <ul class="c-foot__list">
-      <li class="c-foot__item c-foot__item--heading">
-        {% trans "Event" %}
-      </li>
+<div class="c-foot__navigation">
+  <ul class="c-foot__list">
+    <li class="c-foot__item c-foot__item--heading">
+      {% trans "Event" %}
+    </li>
 
-{#      <li class="c-foot__item">#}
-{#        <a class="c-foot__link" href="javscript:void()">#}
-{#          {% trans "Schedule" %}#}
-{#        </a>#}
-{#      </li>#}
+    {#      <li class="c-foot__item">#}
+    {#        <a class="c-foot__link" href="javscript:void()">#}
+    {#          {% trans "Schedule" %}#}
+    {#        </a>#}
+    {#      </li>#}
 
-{#      <li class="c-foot__item">#}
-{#        <a class="c-foot__link" href="javscript:void()">#}
-{#          {% trans "Venue" %}#}
-{#        </a>#}
-{#      </li>#}
+    {#      <li class="c-foot__item">#}
+    {#        <a class="c-foot__link" href="javscript:void()">#}
+    {#          {% trans "Venue" %}#}
+    {#        </a>#}
+    {#      </li>#}
 
-      <li class="c-foot__item">
-        <a class="c-foot__link" href="{% url 'about' %}">
-          {% trans "About" %}
-        </a>
-      </li>
+    <li class="c-foot__item">
+      <a class="c-foot__link" href="{% url 'about' %}">
+        {% trans "About" %}
+      </a>
+    </li>
 
-{#      <li class="c-foot__item">#}
-{#        <a class="c-foot__link" href="javscript:void()">#}
-{#          {% trans "Sponsors" %}#}
-{#        </a>#}
-{#      </li>#}
-    </ul>
+    <li class="c-foot__item">
+      <a class="c-foot__link" href="{% url 'sponsors:sponsors' %}">
+        {% trans "Sponsors" %}
+      </a>
+    </li>
+  </ul>
 
-    <ul class="c-foot__list">
-      <li class="c-foot__item c-foot__item--heading">
-        {% trans "Participate" %}
-      </li>
+  <ul class="c-foot__list">
+    <li class="c-foot__item c-foot__item--heading">
+      {% trans "Participate" %}
+    </li>
 
-{#      <li class="c-foot__item">#}
-{#        <a class="c-foot__link" href="javscript:void()">#}
-{#          {% trans "Tickets" %}#}
-{#        </a>#}
-{#      </li>#}
+    {#      <li class="c-foot__item">#}
+    {#        <a class="c-foot__link" href="javscript:void()">#}
+    {#          {% trans "Tickets" %}#}
+    {#        </a>#}
+    {#      </li>#}
 
-      <li class="c-foot__item">
-        <a class="c-foot__link" href="http://eepurl.com/bs9mG9">
-          {% trans "Newsletter" %}
-        </a>
-      </li>
+    <li class="c-foot__item">
+      <a class="c-foot__link" href="http://eepurl.com/bs9mG9">
+        {% trans "Newsletter" %}
+      </a>
+    </li>
 
-{#      <li class="c-foot__item">#}
-{#        <a class="c-foot__link" href="{% url 'volunteer' %}">#}
-{#          {% trans "Become a Volunteer" %}#}
-{#        </a>#}
-{#      </li>#}
-    </ul>
+    {#      <li class="c-foot__item">#}
+    {#        <a class="c-foot__link" href="{% url 'volunteer' %}">#}
+    {#          {% trans "Become a Volunteer" %}#}
+    {#        </a>#}
+    {#      </li>#}
+  </ul>
 
-    <ul class="c-foot__list">
-      <li class="c-foot__item c-foot__item--heading">
-        {% trans "Information" %}
-      </li>
+  <ul class="c-foot__list">
+    <li class="c-foot__item c-foot__item--heading">
+      {% trans "Information" %}
+    </li>
 
-      <li class="c-foot__item">
-        <a class="c-foot__link" href="{% url 'code-of-conduct' %}">
-          {% trans "Code of conduct" %}
-        </a>
-      </li>
+    <li class="c-foot__item">
+      <a class="c-foot__link" href="{% url 'code-of-conduct' %}">
+        {% trans "Code of conduct" %}
+      </a>
+    </li>
 
-      <li class="c-foot__item">
-        <a class="c-foot__link" href="mailto:organizers@pycon.ca">
-          {% trans "Contact" %}
-        </a>
-      </li>
-    </ul>
+    <li class="c-foot__item">
+      <a class="c-foot__link" href="mailto:organizers@pycon.ca">
+        {% trans "Contact" %}
+      </a>
+    </li>
+  </ul>
 
-    <ul class="c-foot__list">
-      <li class="c-foot__item c-foot__item--heading">
-        {% trans "Follow us" %}
-      </li>
+  <ul class="c-foot__list">
+    <li class="c-foot__item c-foot__item--heading">
+      {% trans "Follow us" %}
+    </li>
 
-      <li class="c-foot__item">
-        <a class="c-foot__link" href="https://www.facebook.com/pyconca" target="_blank">
-          Facebook
-        </a>
-      </li>
+    <li class="c-foot__item">
+      <a class="c-foot__link" href="https://www.facebook.com/pyconca" target="_blank">
+        Facebook
+      </a>
+    </li>
 
-      <li class="c-foot__item">
-        <a class="c-foot__link" href="https://twitter.com/pyconca" target="_blank">
-          Twitter
-        </a>
-      </li>
+    <li class="c-foot__item">
+      <a class="c-foot__link" href="https://twitter.com/pyconca" target="_blank">
+        Twitter
+      </a>
+    </li>
 
-      <li class="c-foot__item">
-        <a class="c-foot__link" href="https://www.youtube.com/c/pyconca" target="_blank">
-          Youtube
-        </a>
-      </li>
-    </ul>
-  </div>
-</footer>
+    <li class="c-foot__item">
+      <a class="c-foot__link" href="https://www.youtube.com/c/pyconca" target="_blank">
+        Youtube
+      </a>
+    </li>
+  </ul>
+</div>

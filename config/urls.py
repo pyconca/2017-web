@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
     url(r'^venue/$', TemplateView.as_view(template_name='pages/venue.html'), name='venue'),
     url(r'^volunteer/$', TemplateView.as_view(template_name='pages/volunteer.html'), name='volunteer'),
-    url(r'^sponsors/$', TemplateView.as_view(template_name='pages/sponsors.html'), name='sponsors'),
+    url(r'^sponsors/$', include('pyconca2017.pycon_sponsors.urls', namespace='sponsors')),
     url(r'^schedule/$', TemplateView.as_view(template_name='pages/schedule.html'), name='schedule'),
     url(r'^code-of-conduct/$', TemplateView.as_view(template_name='pages/code_of_conduct.html'),
         name='code-of-conduct'),

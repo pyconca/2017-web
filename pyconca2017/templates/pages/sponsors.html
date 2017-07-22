@@ -1,10 +1,61 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n sponsorship_tags thumbnail bilingual %}
 
 {% block content %}
 
   <div class="container">
-    <h1>{% trans "Sponsors are coming soon" %}</h1>
+
+
+    <div class="c-block-illustration" style="margin-top: 2rem;">
+      {% include 'components/svgs/svg-tour.html' %}
+      <h1 class="c-block-illustration__heading">
+        {% trans "Our Sponsors" %}
+      </h1>
+
+      <p class="c-block-illustration__copy">
+        {% trans "" %}
+        {% blocktrans %}
+          We thank our fantastic sponsors who help make this event possible.
+          <a href="mailto:sponsorship@pycon.ca">Get in touch</a> if your organization would like to support PyCon Canada
+          2016.
+        {% endblocktrans %}
+      </p>
+    </div>
+
+    {% for level in sponsor_levels %}
+      <h2 class="c-block-image__heading">{% bilingual level 'name' %}</h2>
+
+      {% for sponsor in level.sponsors %}
+        <div class="row c-block-sponsor">
+          <div class="col-md-6 c-block-sponsor__left">
+            {% bilingual sponsor 'logo' as logo %}
+            {% if logo %}
+              <a href="{% bilingual sponsor 'url' %}" target="_blank">
+                <img src="{{ logo.url }}" alt="{% bilingual sponsor 'name' %}" class="c-block-sponsor__logo"/>
+              </a>
+            {% else %}
+              <h1 class="text-center"><a href="{% bilingual sponsor 'url' %}"
+                                         target="_blank">{% bilingual sponsor 'name' %}</a></h1>
+            {% endif %}
+            {% bilingual sponsor 'twitter_username' as twitter_username %}
+            {% if twitter_username %}
+              <a href="{% bilingual sponsor 'twitter_url' %}" class="twitter-follow-button" data-size="large"
+                 data-show-count="false">Follow @{{ twitter_username }}</a>
+            {% endif %}
+          </div>
+          <div class="col-md-6">
+            {% bilingual sponsor 'description' %}
+          </div>
+        </div>
+      {% endfor %}
+    {% endfor %}
   </div>
 
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+{% endblock %}
+
+{# Override sponsors footer #}
+{% block sponsors %}
+  {% include 'components/svgs/svg-illustration-full.html' %}
 {% endblock %}
