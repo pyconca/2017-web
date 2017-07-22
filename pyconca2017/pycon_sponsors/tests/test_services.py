@@ -1,7 +1,5 @@
 from pyconca2017.pycon_sponsors.services import SponsorsService
 
-from django.template import Template, Context
-from django.utils import translation
 from test_plus.test import TestCase
 
 from pyconca2017.pycon_sponsors.tests.factories import SponsorFactory, LevelFactory
