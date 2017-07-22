@@ -5,9 +5,13 @@ The website for `PyCon Canada 2017`_.
 
 .. _`PyCon Canada 2017`: https://2017.pycon.ca/
 
+.. image:: https://travis-ci.org/pyconca/2017-web.svg?branch=master
+    :target: https://travis-ci.org/pyconca/2017-web
+
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
      :alt: Built with Cookiecutter Django
+
 
 
 :License: MIT
