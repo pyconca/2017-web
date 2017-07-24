@@ -1,0 +1,15 @@
+{% load i18n thumbnail bilingual %}
+
+<div class="c-foot__block">
+  <h1 class="c-foot__block-title">{% trans "Our Sponsors" %}</h1>
+
+  <div class="c-foot__sponsor-list">
+    {% for sponsor in SPONSORS %}
+      {% bilingual sponsor 'logo' as logo %}
+      <a href="{% bilingual sponsor 'url' %}" target="_blank" class="c-foot__sponsor-link">
+        <img class="c-foot__sponsor-image" src="{{ logo.url }}"
+             alt="{% bilingual sponsor 'name' %}">
+      </a>
+    {% endfor %}
+  </div>
+</div>

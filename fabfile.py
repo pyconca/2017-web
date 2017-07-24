@@ -5,7 +5,7 @@ import os
 from StringIO import StringIO
 
 import yaml
-from fabric.api import *
+from fabric.api import env, sudo, require, cd, local, put, run, task, shell_env
 from fabric.contrib.files import exists
 from fabric.utils import puts
 from fabric.colors import blue, magenta, white
@@ -124,8 +124,6 @@ def deploy():
 
             yell(magenta("Migrate and Update the database..."))
             run('%(virtualenv_root)s/bin/python manage.py migrate --noinput' % env)
-            run('%(virtualenv_root)s/bin/python manage.py pycon_start' % env)
-            run('%(virtualenv_root)s/bin/python manage.py create_review_permissions' % env)
 
         yell(magenta("bootstrap environment..."))
         put(get_and_render_template('template.env', env),
@@ -146,15 +144,15 @@ def deploy():
         sudo('supervisorctl restart pycon2017_%(environment)s' % env)
 
     yell(magenta("Draw a ship..."))
-    yell(  white("               |    |    |               "))
-    yell(  white("              )_)  )_)  )_)              "))
-    yell(  white("             )___))___))___)\            "))
-    yell(  white("            )____)____)_____)\\          "))
+    yell(  white("               |    |    |               "))  # NOQA
+    yell(  white("              )_)  )_)  )_)              "))  # NOQA
+    yell(  white("             )___))___))___)\            "))  # NOQA
+    yell(  white("            )____)____)_____)\\          "))  # NOQA
     yell(magenta("          _____|____|____|____\\\__      "))
     yell(magenta(" ---------\                   /--------- "))
-    yell(   blue("   ^^^^^ ^^^^^^^^^^^^^^^^^^^^^           "))
-    yell(   blue("     ^^^^      ^^^^     ^^^    ^^        "))
-    yell(   blue("          ^^^^      ^^^                  "))
+    yell(   blue("   ^^^^^ ^^^^^^^^^^^^^^^^^^^^^           "))  # NOQA
+    yell(   blue("     ^^^^      ^^^^     ^^^    ^^        "))  # NOQA
+    yell(   blue("          ^^^^      ^^^                  "))  # NOQA
 
 
 def get_and_render_template(filename, context):

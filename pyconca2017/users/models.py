@@ -7,7 +7,6 @@ from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
-from django.conf import settings
 
 
 @python_2_unicode_compatible

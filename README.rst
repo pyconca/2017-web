@@ -5,9 +5,13 @@ The website for `PyCon Canada 2017`_.
 
 .. _`PyCon Canada 2017`: https://2017.pycon.ca/
 
+.. image:: https://travis-ci.org/pyconca/2017-web.svg?branch=master
+    :target: https://travis-ci.org/pyconca/2017-web
+
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
      :alt: Built with Cookiecutter Django
+
 
 
 :License: MIT
@@ -21,7 +25,6 @@ Setup
     $ pip install --upgrade -r requirements/local.txt
     $ export DJANGO_SETTINGS_MODULE=config.settings.local
     $ python manage.py migrate
-    $ python manage.py pycon_start
     $ python manage.py runserver
 
 
@@ -38,16 +41,6 @@ Setting Up Your Users
     $ python manage.py createsuperuser
 
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
-
-Setting Up Conference
-^^^^^^^^^^^^^^^^^^^^^
-
-For quick start run
-
-    $ python manage.py pycon_start
-
-This command will setup conference, sections, and other basic configuration. The setup configuration is defined in the
-`pyconca2017/pycon_proposals/management/commands/pycon_start.py`.
 
 Test coverage
 ^^^^^^^^^^^^^
