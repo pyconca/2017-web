@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: pyconca2017/templates/pages/sponsors.html:16
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-21 23:36-0400\n"
+"POT-Creation-Date: 2017-07-25 23:04-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -309,6 +308,11 @@ msgstr ""
 msgid "Event"
 msgstr "Évènement"
 
+#: pyconca2017/templates/components/layout/footer.html:17
+#: pyconca2017/templates/components/layout/header.html:36
+msgid "Venue"
+msgstr "Lieu"
+
 #: pyconca2017/templates/components/layout/footer.html:23
 #: pyconca2017/templates/components/layout/header.html:18
 msgid "About"
@@ -326,6 +330,10 @@ msgstr "Participer"
 #: pyconca2017/templates/components/layout/footer.html:47
 msgid "Newsletter"
 msgstr "Infolettre"
+
+#: pyconca2017/templates/components/layout/footer.html:53
+msgid "Become a Volunteer"
+msgstr "Devenez bénévole"
 
 #: pyconca2017/templates/components/layout/footer.html:60
 msgid "Information"
@@ -357,17 +365,9 @@ msgstr "Montréal"
 msgid "November 18-21, 2017"
 msgstr "18-21 Novembre 2017"
 
-#: pyconca2017/templates/dashboard.html:16
-msgid "Speaking"
-msgstr ""
-
-#: pyconca2017/templates/dashboard.html:135
-msgid "Reviews"
-msgstr ""
-
-#: pyconca2017/templates/dashboard.html:180
-msgid "Teams"
-msgstr ""
+#: pyconca2017/templates/components/layout/header.html:42
+msgid "Volunteer"
+msgstr "Bénévole"
 
 #: pyconca2017/templates/pages/about.html:10
 msgid "is an initiative to strengthen the Canadian Python community."
@@ -491,7 +491,7 @@ msgstr "Recevez tous les détails de l'événement dès qu'ils sont disponibles"
 msgid "Subscribe"
 msgstr "Souscrire"
 
-#: pyconca2017/templates/pages/sponsors.html:17
+#: pyconca2017/templates/pages/sponsors.html:16
 msgid ""
 "\n"
 "          We thank our fantastic sponsors who help make this event "
@@ -506,22 +506,50 @@ msgstr ""
 "possible. <a href=\"mailto:sponsorship@pycon.ca\">Contactez-nous</a> si "
 "votre organisation aimerait aider PyCon Canada 2017."
 
+#: pyconca2017/templates/pages/venue.html:9
+msgid "Location"
+msgstr "Emplacement"
+
+#: pyconca2017/templates/pages/venue.html:10
+#, fuzzy
+#| msgid ""
+#| "This year, PyCon Canada will be held November 18-21, 2017 in Montreal, "
+#| "Quebec, Canada."
+msgid ""
+"PyCon Canada 2017 is being held at Université du Québec à Montréal from "
+"18-21 November 2017 in Montréal, Québec, Canada."
+msgstr ""
+"Cette année, PyCon Canada se tiendra du 18 au 21 novembre 2017 à Montréal, "
+"Québec, Canada."
+
 #: pyconca2017/templates/pages/volunteer.html:9
 msgid "Volunteering at PyCon Canada 2017"
+msgstr "Être bénévole à PyCon Canada 2017"
+
+#: pyconca2017/templates/pages/volunteer.html:10
+msgid ""
+"We're all looking forward to the great conference in November. The "
+"organizing team is working hard to make this happen, but we can't do it "
+"alone."
 msgstr ""
+"Nous sommes très excités par PyCon Canada 2017. L'équipe d'organisation "
+"travaille très fort pour que cet événement soit une réussite, mais nous ne "
+"pouvons pas le faire seuls."
 
 #: pyconca2017/templates/pages/volunteer.html:11
 msgid ""
-"\n"
-"            We're all looking forward to the great conference in November -"
-"the organizing team is working hard to make this happen, but we can't do it "
-"alone.\n"
-"\n"
-"            Volunteers <strong>must be registered</strong> to volunteer, but "
-"we welcome <strong>all attendees</strong> to lend a hand. We much appreciate "
-"any assistance you can give us.\n"
-"          "
+"Volunteers <strong>must be registered</strong> to volunteer, but we welcome "
+"<strong>all attendees</strong> to lend a hand. We appreciate any assistance "
+"you can give us."
 msgstr ""
+"Les bénévoles doivent être enregistrés à la conférence pour faire du "
+"bénévolat, mais nous acceptons tous les participants qui désirent donner un "
+"coup de main. Nous sommes infiniment reconnaissant toute aide que vous "
+"pouvez nous donner."
+
+#: pyconca2017/templates/pages/volunteer.html:14
+msgid "Volunteer for PyCon Canada"
+msgstr "Soyez bénévole à PyCon Canada"
 
 #: pyconca2017/users/models.py:17
 msgid "Name of User"

@@ -12,11 +12,11 @@
     {#        </a>#}
     {#      </li>#}
 
-    {#      <li class="c-foot__item">#}
-    {#        <a class="c-foot__link" href="javscript:void()">#}
-    {#          {% trans "Venue" %}#}
-    {#        </a>#}
-    {#      </li>#}
+          <li class="c-foot__item">
+            <a class="c-foot__link" href="{% url 'venue' %}">
+              {% trans "Venue" %}
+            </a>
+          </li>
 
     <li class="c-foot__item">
       <a class="c-foot__link" href="{% url 'about' %}">
@@ -48,12 +48,12 @@
       </a>
     </li>
 
-    {#      <li class="c-foot__item">#}
-    {#        <a class="c-foot__link" href="{% url 'volunteer' %}">#}
-    {#          {% trans "Become a Volunteer" %}#}
-    {#        </a>#}
-    {#      </li>#}
-  </ul>
+      <li class="c-foot__item">
+        <a class="c-foot__link" href="{% url 'volunteer' %}">
+          {% trans "Become a Volunteer" %}
+        </a>
+      </li>
+    </ul>
 
   <ul class="c-foot__list">
     <li class="c-foot__item c-foot__item--heading">
