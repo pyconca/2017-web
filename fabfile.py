@@ -110,7 +110,7 @@ def deploy():
 
         django_debug = 1
 
-        if env.environment = 'production':
+        if env.environment == 'production':
             django_debug = 0
 
         with shell_env(DJANGO_SETTINGS_MODULE='config.settings.production',
