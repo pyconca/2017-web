@@ -18,7 +18,8 @@ yell = puts
 
 
 def load_secrets():
-    required = {'db_user', 'db_pass', 'slackbot_token', 'django_secret_key'}
+    required = {'db_user', 'db_pass', 'slackbot_token', 'django_secret_key',
+                'django_debug'}
     with open('secret.yml') as f:
         secrets = yaml.load(f)
 
@@ -107,11 +108,17 @@ def deploy():
         # run('source %(remote_env_path)s/bin/activate' % env)
         sudo('source %(virtualenv_root)s/bin/activate && pip install --upgrade -r requirements.txt' % env)
 
+        django_debug = 1
+
+        if env.environment = 'production':
+            django_debug = 0
+
         with shell_env(DJANGO_SETTINGS_MODULE='config.settings.production',
                        DATABASE_URL='postgres://%(db_user)s:%(db_pass)s@localhost:5432/%(db_name)s' % env,
                        DJANGO_SECRET_KEY=env.django_secret_key,
                        DJANGO_ADMIN_URL='admin',
-                       PYTHONPATH='.'):
+                       PYTHONPATH='.',
+                       DJANGO_DEBUG=django_debug):
             yell(magenta("Collect all the static files..."))
             sudo('%(virtualenv_root)s/bin/python manage.py collectstatic --noinput' % env)
 
