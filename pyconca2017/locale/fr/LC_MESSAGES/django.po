@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-25 22:16-0400\n"
+"POT-Creation-Date: 2017-07-25 23:04-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -507,10 +507,8 @@ msgstr ""
 "votre organisation aimerait aider PyCon Canada 2017."
 
 #: pyconca2017/templates/pages/venue.html:9
-#, fuzzy
-#| msgid "Information"
 msgid "Location"
-msgstr "Information"
+msgstr "Emplacement"
 
 #: pyconca2017/templates/pages/venue.html:10
 #, fuzzy
