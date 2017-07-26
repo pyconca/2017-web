@@ -38,6 +38,12 @@
 {#        </li>#}
 
         <li class="c-nav__item">
+          <a class="c-nav__link" href="{% url 'volunteer' %}">
+            {% trans "Volunteer" %}
+          </a>
+        </li>
+
+        <li class="c-nav__item">
           {% get_current_language as LANGUAGE_CODE %}
           <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
             <input name="language" value="{% if LANGUAGE_CODE == 'en' %}fr{% else %}en{% endif %}" type="hidden">
