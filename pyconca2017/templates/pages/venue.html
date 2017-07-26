@@ -1,41 +1,19 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n presenters %}
 
 {% block content %}
 
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1>Location</h1>
-        PyCon Canada 2017 is being held at Université du Québec à Montréal 
-        from 18-21 November 2017 in Montréal, Québec, Canada.
+        <h1>{% trans "Location" %}</h1>
+        {% trans "PyCon Canada 2017 is being held at Université du Québec à Montréal from 18-21 November 2017 in Montréal, Québec, Canada." %}
       </div>
       <div class="col-md-6"></div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <h1>Getting to Montréal</h1>
-        Pierre-Elliot Trudeau airport is a great way to get in the city. Montréal 
-        Trudeau is the international airport and is the location for almost all 
-        the major domestic and international airlines. It's about a 25 minutes drive 
-        from Montréal Trudent to the Université du Québec à Montréal. The bus shuttle
-        number 747 can get you from the airport to a few blocks from the venue for $10.
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Public Transit</h1>
-        The venue is located right above the largest subway hub of Montréal's 
-        public transportation system, Berri-UQAM station. Cash fare is $3.25, or 
-        multiple tickets can be purchased at discounted rates. Check with the
-        <a href="http://www.stm.info/en">STM</a> for more details.
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h1>What do to in Montréal</h1>
-        Tourism Montréal's <a href="https://www.mtl.org/en">website</a> has information on things to see and do 
-        in Montréal, as well as a "Deals" section including coupons.
+        {% include_md 'venue.md' %}
       </div>
     </div>
   </div>
