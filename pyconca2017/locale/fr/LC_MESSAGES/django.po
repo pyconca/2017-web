@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-25 23:04-0400\n"
+"POT-Creation-Date: 2017-07-26 16:22-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -296,9 +296,13 @@ msgid "PyCon Canada 2017"
 msgstr ""
 
 #: pyconca2017/templates/base.html:10 pyconca2017/templates/base.html:22
+#, fuzzy
+#| msgid ""
+#| "Join your fellow Pythonistas for the fourth annual PyCon Canada, a "
+#| "weekend of talks, activities, fun and code!"
 msgid ""
-"Join your fellow Pythonistas for the fourth annual PyCon Canada, a weekend "
-"of talks, activities, fun and code!"
+"Join your fellow Pythonistas for the fifth annual PyCon Canada, a weekend of "
+"talks, activities, fun and code!"
 msgstr ""
 "Joignez-vous &agrave; la communaut&eacute; Python lors du quatri&egrave;me "
 "PyCon Canada, pour une fin de semaine de pr&eacute;sentations, d&#x27;"
@@ -368,6 +372,13 @@ msgstr "18-21 Novembre 2017"
 #: pyconca2017/templates/components/layout/header.html:42
 msgid "Volunteer"
 msgstr "Bénévole"
+
+#: pyconca2017/templates/components/layout/header.html:57
+#: pyconca2017/templates/pages/home.html:19
+#, fuzzy
+#| msgid "Submit a Talk Proposal"
+msgid "Submit a Proposal"
+msgstr "Soumettre une présentation"
 
 #: pyconca2017/templates/pages/about.html:10
 msgid "is an initiative to strengthen the Canadian Python community."
@@ -547,7 +558,7 @@ msgstr ""
 "coup de main. Nous sommes infiniment reconnaissant toute aide que vous "
 "pouvez nous donner."
 
-#: pyconca2017/templates/pages/volunteer.html:14
+#: pyconca2017/templates/pages/volunteer.html:15
 msgid "Volunteer for PyCon Canada"
 msgstr "Soyez bénévole à PyCon Canada"
 
@@ -562,6 +573,11 @@ msgstr ""
 #: pyconca2017/utils/models.py:13
 msgid "date updated"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Submit a Talk Proposal"
+#~ msgid "Submit a Talk"
+#~ msgstr "Soumettre une présentation"
 
 #, fuzzy
 #~| msgid "Information"

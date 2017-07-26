@@ -38,7 +38,7 @@ def staging():
     env.hosts = ['portland.pynorth.org']
     env.site_hostname = 'staging.2017.pycon.ca'
     env.root = '/srv/www/pycon.ca/staging.2017/django'
-    env.branch = 'master'
+    env.branch = local('git rev-parse --abbrev-ref HEAD', capture=True)
     env.db_name = 'pycon2017_staging'
     env.workers = 1
     env.allowed_hosts = 'staging.2017.pycon.ca'
