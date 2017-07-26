@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-25 23:04-0400\n"
+"POT-Creation-Date: 2017-07-26 12:41-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -467,6 +467,10 @@ msgstr ""
 "PyCon Canada s'engage à offrir une ambiance sécuritaire et accueillante pour "
 "tous les participants."
 
+#: pyconca2017/templates/pages/home.html:19
+msgid "Submit a Talk or Tutorial Proposal"
+msgstr "Soumettre une présentation ou un tutoriel"
+
 #: pyconca2017/templates/pages/home.html:38
 msgid "Where is the event?"
 msgstr "Où Se Déroule L'évènement"
@@ -547,7 +551,7 @@ msgstr ""
 "coup de main. Nous sommes infiniment reconnaissant toute aide que vous "
 "pouvez nous donner."
 
-#: pyconca2017/templates/pages/volunteer.html:14
+#: pyconca2017/templates/pages/volunteer.html:15
 msgid "Volunteer for PyCon Canada"
 msgstr "Soyez bénévole à PyCon Canada"
 
