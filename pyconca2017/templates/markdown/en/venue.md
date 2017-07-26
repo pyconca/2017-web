@@ -3,7 +3,7 @@
 Pierre-Elliot Trudeau airport is a great way to get in the city. Montréal 
 Trudeau is the international airport and is the location for almost all 
 the major domestic and international airlines. It's about a 25 minutes drive 
-from Montréal Trudent to the Université du Québec à Montréal. The bus shuttle
+from Montréal Trudeau to the Université du Québec à Montréal. The bus shuttle
 number 747 can get you from the airport to a few blocks from the venue for $10.
 
 
