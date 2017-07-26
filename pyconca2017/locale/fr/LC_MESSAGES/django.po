@@ -311,7 +311,7 @@ msgstr "Évènement"
 #: pyconca2017/templates/components/layout/footer.html:17
 #: pyconca2017/templates/components/layout/header.html:36
 msgid "Venue"
-msgstr ""
+msgstr "Lieu"
 
 #: pyconca2017/templates/components/layout/footer.html:23
 #: pyconca2017/templates/components/layout/header.html:18
