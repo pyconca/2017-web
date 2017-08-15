@@ -74,7 +74,7 @@ gulp.task('imgCompression', function(){
 
 // Run django server
 gulp.task('runServer', function() {
-  exec('python manage.py runserver', function (err, stdout, stderr) {
+  exec('python manage.py runserver 8888', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
   });
@@ -84,7 +84,7 @@ gulp.task('runServer', function() {
 gulp.task('browserSync', function() {
     browserSync.init(
       [paths.css + "/*.css", paths.js + "*.js", paths.templates + '*.html'], {
-        proxy:  "localhost:8000"
+        proxy:  "localhost:8888"
     });
 });
 
