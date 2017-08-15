@@ -22,7 +22,8 @@ urlpatterns = [
         name='code-of-conduct'),
 
     # Django Admin, use {% url 'admin:index' %}
-    url(settings.ADMIN_URL, admin.site.urls),
+    # url(settings.ADMIN_URL, admin.site.urls),
+    url(r'^admin/', admin.site.urls),
 
     # User management
     url(r'^users/', include('pyconca2017.users.urls', namespace='users')),
