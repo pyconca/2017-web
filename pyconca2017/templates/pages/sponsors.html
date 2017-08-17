@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n thumbnail bilingual %}
+{% load i18n thumbnail bilingual static %}
 
 {% block content %}
 
@@ -19,6 +19,10 @@
           2017.
         {% endblocktrans %}
       </p>
+
+      <div class="c-block-illustration__btn">
+        <a href="{% static "pdfs/pyconca2017-sponsorship-prospectus.pdf" %}" class="c-btn c-btn--primary">{% trans "Download our sponsorship prospectus" %}</a>
+      </div>
     </div>
 
     {% for level in sponsor_levels %}
