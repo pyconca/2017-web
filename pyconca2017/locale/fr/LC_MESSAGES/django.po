@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-17 18:48-0400\n"
+"POT-Creation-Date: 2017-08-17 19:00-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -332,26 +332,33 @@ msgid "Participate"
 msgstr "Participer"
 
 #: pyconca2017/templates/components/layout/footer.html:47
+#: pyconca2017/templates/components/layout/header.html:48
+#, fuzzy
+#| msgid "Volunteer for PyCon Canada"
+msgid "Financial Aid"
+msgstr "Aide financière"
+
+#: pyconca2017/templates/components/layout/footer.html:53
 msgid "Newsletter"
 msgstr "Infolettre"
 
-#: pyconca2017/templates/components/layout/footer.html:53
+#: pyconca2017/templates/components/layout/footer.html:59
 msgid "Become a Volunteer"
 msgstr "Devenez bénévole"
 
-#: pyconca2017/templates/components/layout/footer.html:60
+#: pyconca2017/templates/components/layout/footer.html:66
 msgid "Information"
 msgstr "Information"
 
-#: pyconca2017/templates/components/layout/footer.html:65
+#: pyconca2017/templates/components/layout/footer.html:71
 msgid "Code of conduct"
 msgstr "Code de conduite"
 
-#: pyconca2017/templates/components/layout/footer.html:71
+#: pyconca2017/templates/components/layout/footer.html:77
 msgid "Contact"
 msgstr "Contact"
 
-#: pyconca2017/templates/components/layout/footer.html:78
+#: pyconca2017/templates/components/layout/footer.html:84
 msgid "Follow us"
 msgstr "Suivez-nous"
 
@@ -373,7 +380,7 @@ msgstr "18-21 Novembre 2017"
 msgid "Volunteer"
 msgstr "Bénévole"
 
-#: pyconca2017/templates/components/layout/header.html:57
+#: pyconca2017/templates/components/layout/header.html:63
 #: pyconca2017/templates/pages/home.html:19
 #, fuzzy
 #| msgid "Submit a Talk Proposal"
@@ -477,6 +484,23 @@ msgid ""
 msgstr ""
 "PyCon Canada s'engage à offrir une ambiance sécuritaire et accueillante pour "
 "tous les participants."
+
+#: pyconca2017/templates/pages/fa.html:9
+#, fuzzy
+#| msgid "Volunteering at PyCon Canada 2017"
+msgid "Financial Aid for PyCon Canada 2017"
+msgstr "Aide financière à PyCon Canada 2017"
+
+#: pyconca2017/templates/pages/fa.html:10
+#: pyconca2017/templates/pages/fa.html:11
+msgid "TODO"
+msgstr ""
+
+#: pyconca2017/templates/pages/fa.html:15
+#, fuzzy
+#| msgid "Volunteer for PyCon Canada"
+msgid "Financial Aid for PyCon Canada"
+msgstr "Aide financière à PyCon Canada"
 
 #: pyconca2017/templates/pages/home.html:38
 msgid "Where is the event?"
