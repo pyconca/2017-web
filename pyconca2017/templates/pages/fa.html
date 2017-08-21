@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 c-block-text">
+        <h1>{% trans "Financial Aid for PyCon Canada 2017" %}</h1>
+        <p>{% trans "Want to attend but concerned about the cost? We’d love to help! Submit a financial aid request and we may be able to help cover the cost of your tickets, trip, and hotel!" %}</p>
+        <p class="text-center">
+          <a class="c-btn c-btn--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdR9XCk_UZTE1lLFGvDy1uIJlXieDJym8dQEDtUN3hqD_Vjow/viewform">
+            {% trans "Financial Aid for PyCon Canada" %}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
