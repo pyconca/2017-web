@@ -30,7 +30,7 @@ class TestSponsorService(TestCase):
 
     def test_get_sponsors_ordered(self):
         sponsors = self.sut.get_sponsors().values_list('order', flat=True)
-        self.assertEqual(list(sponsors), [1, 2, 3, 4])
+        self.assertEqual(list(sponsors), [2, 3, 1, 4])
 
     def test_get_sponsors_active_only(self):
         SponsorFactory(active=False)
