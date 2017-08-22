@@ -10,9 +10,9 @@ class SponsorsService(object):
         return PySponsor.objects.filter(
             active=True
         ).order_by(
-            'order', 'added_on'
+            'level__order', 'order'
         )
 
     def get_levels(self):
 
-        return PySponsorLevel.objects.annotate(sponsor_count=Count('py_sponsors')).filter(sponsor_count__gt=0)
+        return PySponsorLevel.objects.annotate(sponsor_count=Count('py_sponsors')).filter(sponsor_count__gt=0).order_by('order')
