@@ -14,5 +14,5 @@ class SponsorsService(object):
         )
 
     def get_levels(self):
-
-        return PySponsorLevel.objects.annotate(sponsor_count=Count('py_sponsors')).filter(sponsor_count__gt=0).order_by('order')
+        return PySponsorLevel.objects.annotate(sponsor_count=Count('py_sponsors')).filter(sponsor_count__gt=0).order_by(
+            'order')
