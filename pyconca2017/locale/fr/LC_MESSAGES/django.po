@@ -522,7 +522,7 @@ msgstr ""
 
 #: pyconca2017/templates/pages/home.html:70
 msgid "Keynote speakers"
-msgstr ""
+msgstr "Présentateurs invités"
 
 #: pyconca2017/templates/pages/home.html:80
 msgid "Site Reliability Engineer"
@@ -540,6 +540,12 @@ msgid ""
 "          knitting needles.\n"
 "        "
 msgstr ""
+"\n"
+"Lynn Root est ingénieure Site Reliability chez Spotify; mais en réalité, elle a plutôt tendance à briser"
+" les choses plutôt que de les rendre plus fiables. Lynn est aussi la dirigeante internationale de PyLadies,"
+" et fondatrice ainsi que dirigeante de PyLadies San Francisco. Quand ses mains ne tapent pas sur un clavier,"
+" elles tiennent la plupart du temps une paire d'aiguilles à tricoter.\n"
+"        "
 
 #: pyconca2017/templates/pages/home.html:104
 msgid "subscribe to our mailing list"
