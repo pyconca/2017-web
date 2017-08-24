@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n staticfiles %}
 
 {% block content %}
 
@@ -16,11 +16,12 @@
         {% include 'components/svgs/svg-logo-full.html' %}
         <br/>
         <br/>
-        <h2><a href="https://www.papercall.io/pyconca2017" class="c-btn c-btn--primary">{% trans "Submit a Proposal" %}</a></h2>
+        <h2><a href="https://www.papercall.io/pyconca2017"
+               class="c-btn c-btn--primary">{% trans "Submit a Proposal" %}</a></h2>
         <br/>
         <br/>
 
-      {% include 'components/svgs/svg-illustration-home.html' %}
+        {% include 'components/svgs/svg-illustration-home.html' %}
       </div>
 
     </div>
@@ -53,6 +54,39 @@
 
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="c-block-text">
+      {% include 'components/svgs/separator.html' %}
+    </div>
+
+    <div class="c-block-heading">
+      {% include 'components/svgs/svg-tree.html' %}
+      <h1 class="c-block-heading__heading">
+        {% trans "Keynote speakers" %}
+      </h1>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row c-block-keynote">
+      <div class="col-md-6 c-block-keynote__left">
+        <h1 class="c-block-keynote__heading">Lynn Root</h1>
+        <h3>Site Reliability Engineer</h3>
+        {% blocktrans %}
+          Lynn Root is a Site Reliability Engineer at Spotify; but in reality, she tends to break things rather than
+          make them more reliable. Lynn is also a global leader of PyLadies, and the founder & former leader of
+          the San Francisco PyLadies. When her hands are not on a keyboard, they are usually holding a pair of
+          knitting needles.
+        {% endblocktrans %}
+      </div>
+      <div class="col-md-6 c-block-keynote__right">
+        <img src="{% static 'images/keynotes/lynn-root.jpg' %}" class="rounded c-block-keynote__image"/>
       </div>
     </div>
   </div>
