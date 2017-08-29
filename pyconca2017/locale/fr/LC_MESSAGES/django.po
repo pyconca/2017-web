@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-23 22:51-0400\n"
+"POT-Creation-Date: 2017-08-28 23:55-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -541,21 +541,63 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"Lynn Root est ingénieure Site Reliability chez Spotify; mais en réalité, elle a plutôt tendance à briser"
-" les choses plutôt que de les rendre plus fiables. Lynn est aussi la dirigeante internationale de PyLadies,"
-" et fondatrice ainsi que dirigeante de PyLadies San Francisco. Quand ses mains ne tapent pas sur un clavier,"
-" elles tiennent la plupart du temps une paire d'aiguilles à tricoter.\n"
+"Lynn Root est ingénieure Site Reliability chez Spotify; mais en réalité, "
+"elle a plutôt tendance à briser les choses plutôt que de les rendre plus "
+"fiables. Lynn est aussi la dirigeante internationale de PyLadies, et "
+"fondatrice ainsi que dirigeante de PyLadies San Francisco. Quand ses mains "
+"ne tapent pas sur un clavier, elles tiennent la plupart du temps une paire "
+"d'aiguilles à tricoter.\n"
 "        "
 
-#: pyconca2017/templates/pages/home.html:104
+#: pyconca2017/templates/pages/home.html:99
+msgid "Managing Directory and Head of Platform Engineering"
+msgstr ""
+
+#: pyconca2017/templates/pages/home.html:101
+msgid ""
+"\n"
+"            Camille Fournier is a Managing Director and Head of Platform "
+"Engineering at Two Sigma.  She is the former\n"
+"            Chief Technology Officer of Rent The Runway and a former Vice "
+"President of Technology at Goldman Sachs.\n"
+"          "
+msgstr ""
+"\n"
+"Camille Fournier est Managing Director and Head of Platform Engineering à "
+"Two Sigma. Elle est l'ancienne Chief Technology Officer de Rent The Runway "
+"et ancienne Vice Présidente Technology a Goldman Sachs."
+
+#: pyconca2017/templates/pages/home.html:107
+msgid ""
+"\n"
+"            Fournier earned an undergraduate degree from Carnegie Mellon "
+"University and a Master's degree in Computer\n"
+"            Science from the University of Wisconsin–Madison. She is a "
+"maintainer of the Apache ZooKeeper open source\n"
+"            project, writes the Ask The CTO column for O'Reilly Media, and "
+"is a regular public speaker and advocate for\n"
+"            greater diversity within technology and leadership. Her book, "
+"\"The Manager's Path,\" was published by\n"
+"            O'Reilly in early 2017.\n"
+"          "
+msgstr ""
+"\n"
+"Fournier a obtenu un diplôme de 1er cycle à Carnegie Mellon University et "
+"une Maitrise en Informatique à University of Wisconsin-Madison. Elle est "
+"mainteneure du projet open source Apache ZooKeeper, écrit la colonne \"Ask "
+"the CTO\" pour O'Reilly Media, et est une conférenciere réguliere qui milite "
+"pour une plus grande diversité au sein des technologies et de la direction. "
+"Son livre, \"The Manager's Path\" a été publié par O'Reilly debut 2017."
+
+#: pyconca2017/templates/pages/home.html:129
 msgid "subscribe to our mailing list"
 msgstr "Abonnez-Vous À Notre Liste D'Envoi"
 
-#: pyconca2017/templates/pages/home.html:108
+#: pyconca2017/templates/pages/home.html:133
 msgid "Receive all event details as they become available"
 msgstr "Recevez tous les détails de l'événement dès qu'ils sont disponibles"
 
-#: pyconca2017/templates/pages/home.html:112
+#: pyconca2017/templates/pages/home.html:137
 msgid "Subscribe"
 msgstr "Souscrire"
 
