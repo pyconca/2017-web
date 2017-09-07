@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-28 23:55-0400\n"
+"POT-Creation-Date: 2017-09-06 22:32-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -589,15 +589,42 @@ msgstr ""
 "pour une plus grande diversité au sein des technologies et de la direction. "
 "Son livre, \"The Manager's Path\" a été publié par O'Reilly debut 2017."
 
-#: pyconca2017/templates/pages/home.html:129
+#: pyconca2017/templates/pages/home.html:121
+msgid "Software Engineer"
+msgstr ""
+
+#: pyconca2017/templates/pages/home.html:122
+msgid ""
+"\n"
+"          Julia Evans is a software engineer at Stripe. In her spare time, "
+"she runs a programming blog about what\n"
+"          she's learning (systems programming, often!) at <a href=\"https://"
+"jvns.ca/\" target=\"_blank\">https://jvns.ca/</a>\n"
+"          and publishes zines at <a href=\"https://jvns.ca/zines\" target="
+"\"_blank\">https://jvns.ca/zines</a>.\n"
+"          She thinks it's important to understand the fundamentals of how "
+"your systems work.\n"
+"        "
+msgstr ""
+"\n"
+"Julia Evans est ingénieure développeuse chez Stripe. Pendant son temps "
+"libre, elle alimente un blog (<a href=\"https://jvns.ca/zines\" target="
+"\"_blank\">https://jvns.ca</a>) sur la programmation dans lequel elle écrit "
+"ce qu'elle apprend (souvent à propos deprogrammation système!), et publie "
+"des zines sur <a href=\"https://jvns.ca/zines\" target=\"_blank\">https://"
+"jvns.ca/zines.</a>\n"
+"Elle pense qu'il est important de comprendre comment les bases d'un système "
+"fonctionnent."
+
+#: pyconca2017/templates/pages/home.html:145
 msgid "subscribe to our mailing list"
 msgstr "Abonnez-Vous À Notre Liste D'Envoi"
 
-#: pyconca2017/templates/pages/home.html:133
+#: pyconca2017/templates/pages/home.html:149
 msgid "Receive all event details as they become available"
 msgstr "Recevez tous les détails de l'événement dès qu'ils sont disponibles"
 
-#: pyconca2017/templates/pages/home.html:137
+#: pyconca2017/templates/pages/home.html:153
 msgid "Subscribe"
 msgstr "Souscrire"
 
