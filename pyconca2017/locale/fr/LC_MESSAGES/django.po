@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-13 23:14-0400\n"
+"POT-Creation-Date: 2017-09-14 00:17-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: config/settings/common.py:137
+#: config/settings/common.py:138
 msgid "English"
 msgstr "Anglais"
 
-#: config/settings/common.py:138
+#: config/settings/common.py:139
 msgid "French"
 msgstr "Français"
 
@@ -351,6 +351,7 @@ msgid "Information"
 msgstr "Information"
 
 #: pyconca2017/templates/components/layout/footer.html:71
+#: pyconca2017/templates/components/layout/header.html:54
 #, fuzzy
 #| msgid "Code of conduct"
 msgid "Code of Conduct"
@@ -381,6 +382,11 @@ msgstr "18-21 Novembre 2017"
 #: pyconca2017/templates/components/layout/header.html:42
 msgid "Volunteer"
 msgstr "Bénévole"
+
+#: pyconca2017/templates/components/layout/header.html:69
+#: pyconca2017/templates/pages/home.html:20
+msgid "Buy a Ticket"
+msgstr "Acheter un billet"
 
 #: pyconca2017/templates/pages/about.html:10
 msgid "is an initiative to strengthen the Canadian Python community."
@@ -503,11 +509,11 @@ msgstr ""
 msgid "Financial Aid for PyCon Canada"
 msgstr "Aide financière à PyCon Canada"
 
-#: pyconca2017/templates/pages/home.html:37
+#: pyconca2017/templates/pages/home.html:39
 msgid "Where is the event?"
 msgstr "Où Se Déroule L'évènement"
 
-#: pyconca2017/templates/pages/home.html:50
+#: pyconca2017/templates/pages/home.html:52
 msgid ""
 "This year, PyCon Canada will be held November 18-21, 2017 in Montreal, "
 "Quebec, Canada."
@@ -515,15 +521,15 @@ msgstr ""
 "Cette année, PyCon Canada se tiendra du 18 au 21 novembre 2017 à Montréal, "
 "Québec, Canada."
 
-#: pyconca2017/templates/pages/home.html:68
+#: pyconca2017/templates/pages/home.html:70
 msgid "Keynote speakers"
 msgstr "Présentateurs invités"
 
-#: pyconca2017/templates/pages/home.html:78
+#: pyconca2017/templates/pages/home.html:80
 msgid "Site Reliability Engineer"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:79
+#: pyconca2017/templates/pages/home.html:81
 msgid ""
 "\n"
 "          Lynn Root is a Site Reliability Engineer at Spotify; but in "
@@ -544,11 +550,11 @@ msgstr ""
 "d'aiguilles à tricoter.\n"
 "        "
 
-#: pyconca2017/templates/pages/home.html:97
+#: pyconca2017/templates/pages/home.html:99
 msgid "Managing Directory and Head of Platform Engineering"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:99
+#: pyconca2017/templates/pages/home.html:101
 msgid ""
 "\n"
 "            Camille Fournier is a Managing Director and Head of Platform "
@@ -562,7 +568,7 @@ msgstr ""
 "Two Sigma. Elle est l'ancienne Chief Technology Officer de Rent The Runway "
 "et ancienne Vice Présidente Technology a Goldman Sachs."
 
-#: pyconca2017/templates/pages/home.html:105
+#: pyconca2017/templates/pages/home.html:107
 msgid ""
 "\n"
 "            Fournier earned an undergraduate degree from Carnegie Mellon "
@@ -584,11 +590,11 @@ msgstr ""
 "pour une plus grande diversité au sein des technologies et de la direction. "
 "Son livre, \"The Manager's Path\" a été publié par O'Reilly debut 2017."
 
-#: pyconca2017/templates/pages/home.html:119
+#: pyconca2017/templates/pages/home.html:121
 msgid "Software Engineer"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:120
+#: pyconca2017/templates/pages/home.html:122
 msgid ""
 "\n"
 "          Julia Evans is a software engineer at Stripe. In her spare time, "
@@ -611,11 +617,11 @@ msgstr ""
 "Elle pense qu'il est important de comprendre comment les bases d'un système "
 "fonctionnent."
 
-#: pyconca2017/templates/pages/home.html:138
+#: pyconca2017/templates/pages/home.html:140
 msgid "Python Core Developer & Software Engineer at Sony Pictures Imageworks"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:140
+#: pyconca2017/templates/pages/home.html:142
 msgid ""
 "\n"
 "            Mariatta is a Python Core Developer and a Software Engineer at "
@@ -631,15 +637,15 @@ msgstr ""
 "conférence PyCascades. Elle a déménagé au Canada il y a près de deux "
 "décénies et considère maintenant Vancouver comme sa maison."
 
-#: pyconca2017/templates/pages/home.html:160
+#: pyconca2017/templates/pages/home.html:162
 msgid "subscribe to our mailing list"
 msgstr "Abonnez-Vous À Notre Liste D'Envoi"
 
-#: pyconca2017/templates/pages/home.html:164
+#: pyconca2017/templates/pages/home.html:166
 msgid "Receive all event details as they become available"
 msgstr "Recevez tous les détails de l'événement dès qu'ils sont disponibles"
 
-#: pyconca2017/templates/pages/home.html:168
+#: pyconca2017/templates/pages/home.html:170
 msgid "Subscribe"
 msgstr "Souscrire"
 

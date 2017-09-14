@@ -50,6 +50,12 @@
         </li>
 
         <li class="c-nav__item">
+          <a class="c-nav__link" href="{% url 'code-of-conduct' %}">
+            {% trans "Code of Conduct" %}
+          </a>
+        </li>
+
+        <li class="c-nav__item">
           {% get_current_language as LANGUAGE_CODE %}
           <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
             <input name="language" value="{% if LANGUAGE_CODE == 'en' %}fr{% else %}en{% endif %}" type="hidden">
@@ -59,5 +65,8 @@
         </li>
       </ul>
     </nav>
+    <div class="c-head__btn-group">
+      <a class="c-btn c-btn--primary" href="https://www.eventbrite.com/e/pycon-canada-2017-tickets-37405248104">{% trans "Buy a Ticket" %}</a>
+    </div>
   </div>
 </header>
