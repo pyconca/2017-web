@@ -26,7 +26,7 @@ class PapercallInterface(object):
         self.client = requests.Session()
         self.client.headers.update({'Authorization': settings.PAPERCALL_TOKEN})
 
-    def get_submissions(self, state=SubmissionStates.SUBMITTED):
+    def get_submissions(self, state=SubmissionStates.ACCEPTED):
         """ Iterator """
         url = '{}{}'.format(self.BASE_URL, self.SUBMISSIONS_LIST_URL)
         params = {
