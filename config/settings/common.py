@@ -287,4 +287,4 @@ ADMIN_URL = r'^admin/'
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
 
-PAPERCALL_TOKEN = env('PAPERCALL_TOKEN')
+PAPERCALL_TOKEN = env('PAPERCALL_TOKEN', default='')
