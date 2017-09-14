@@ -8,6 +8,8 @@ ORGANIZERS = {
     ('Annaelle Duff', 'http://annaelleduff.info/'),
     ('Mathieu Leduc-Hamel', 'https://twitter.com/mlhamel'),
     ('Anarosa Paredes', 'https://twitter.com/aarosered'),
+    ('Lauren McCormick', ''),
+    ('David Wolever', 'https://twitter.com/wolever'),
     # Add you name and url here ^ and submit a pull request
     # Order does not matter, final result is sorted by name
 }
