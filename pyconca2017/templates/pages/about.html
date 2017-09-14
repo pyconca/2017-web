@@ -80,7 +80,12 @@
 
         <p class="lead">
           {% for p, link in ORGANIZERS %}
-            <a href="{{ link }}">{{ p }}</a> {% if not forloop.last %}•{% endif %}
+            {% if link %}
+            <a href="{{ link }}">{{ p }}</a>
+            {% else %}
+            {{ p }}
+            {% endif %}
+            {% if not forloop.last %}•{% endif %}
           {% endfor %}
         </p>
       </div>
