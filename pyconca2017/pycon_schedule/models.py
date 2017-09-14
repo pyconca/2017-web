@@ -69,4 +69,3 @@ class Presentation(models.Model):
 #
 #     def __str__(self):
 #         return '{}: {} - {}'.format(self.room, self.start_time, self.end_time)
-

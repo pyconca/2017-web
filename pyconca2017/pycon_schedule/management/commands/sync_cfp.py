@@ -1,4 +1,4 @@
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 from pyconca2017.pycon_schedule.services import PresentationService
 from pyconca2017.pycon_schedule.models import Presentation, Speaker
 

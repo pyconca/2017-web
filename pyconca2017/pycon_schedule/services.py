@@ -114,5 +114,3 @@ class PresentationService(object):
             presentation = Presentation.objects.get_or_create(papercall_id=data.pop('papercall_id'), defaults=data)[0]
 
         return presentation
-
-
