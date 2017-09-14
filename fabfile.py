@@ -19,7 +19,7 @@ yell = puts
 
 def load_secrets():
     required = {'db_user', 'db_pass', 'slackbot_token', 'django_secret_key',
-                'django_debug'}
+                'papercall_token'}
     with open('secret.yml') as f:
         secrets = yaml.load(f)
 
@@ -42,6 +42,7 @@ def staging():
     env.db_name = 'pycon2017_staging'
     env.workers = 1
     env.allowed_hosts = 'staging.2017.pycon.ca'
+    env.django_debug = 0
 
     yell(magenta('Setting up paths...'))
     setup_path()
@@ -62,6 +63,7 @@ def production():
     env.db_name = 'pycon2017'
     env.workers = 2
     env.allowed_hosts = '2017.pycon.ca,pycon.ca'
+    env.django_debug = 0
 
     yell(magenta('Setting up paths...'))
     setup_path()

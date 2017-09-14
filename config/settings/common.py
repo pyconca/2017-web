@@ -55,6 +55,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'pyconca2017.users.apps.UsersConfig',
     'pyconca2017.pycon_sponsors',
+    'pyconca2017.pycon_schedule',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -285,3 +286,5 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+
+PAPERCALL_TOKEN = env('PAPERCALL_TOKEN', default='')
