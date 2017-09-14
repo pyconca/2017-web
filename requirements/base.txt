@@ -48,5 +48,4 @@ rcssmin==1.0.6
 django-compressor==2.1
 django-bleach==0.3.0
 
-
-# Your custom requirements go here
+requests==2.18.4
