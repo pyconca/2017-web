@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-06 22:32-0400\n"
+"POT-Creation-Date: 2017-09-13 23:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -351,7 +351,9 @@ msgid "Information"
 msgstr "Information"
 
 #: pyconca2017/templates/components/layout/footer.html:71
-msgid "Code of conduct"
+#, fuzzy
+#| msgid "Code of conduct"
+msgid "Code of Conduct"
 msgstr "Code de conduite"
 
 #: pyconca2017/templates/components/layout/footer.html:77
@@ -379,13 +381,6 @@ msgstr "18-21 Novembre 2017"
 #: pyconca2017/templates/components/layout/header.html:42
 msgid "Volunteer"
 msgstr "Bénévole"
-
-#: pyconca2017/templates/components/layout/header.html:63
-#: pyconca2017/templates/pages/home.html:20
-#, fuzzy
-#| msgid "Submit a Talk Proposal"
-msgid "Submit a Proposal"
-msgstr "Soumettre une présentation"
 
 #: pyconca2017/templates/pages/about.html:10
 msgid "is an initiative to strengthen the Canadian Python community."
@@ -508,11 +503,11 @@ msgstr ""
 msgid "Financial Aid for PyCon Canada"
 msgstr "Aide financière à PyCon Canada"
 
-#: pyconca2017/templates/pages/home.html:39
+#: pyconca2017/templates/pages/home.html:37
 msgid "Where is the event?"
 msgstr "Où Se Déroule L'évènement"
 
-#: pyconca2017/templates/pages/home.html:52
+#: pyconca2017/templates/pages/home.html:50
 msgid ""
 "This year, PyCon Canada will be held November 18-21, 2017 in Montreal, "
 "Quebec, Canada."
@@ -520,15 +515,15 @@ msgstr ""
 "Cette année, PyCon Canada se tiendra du 18 au 21 novembre 2017 à Montréal, "
 "Québec, Canada."
 
-#: pyconca2017/templates/pages/home.html:70
+#: pyconca2017/templates/pages/home.html:68
 msgid "Keynote speakers"
 msgstr "Présentateurs invités"
 
-#: pyconca2017/templates/pages/home.html:80
+#: pyconca2017/templates/pages/home.html:78
 msgid "Site Reliability Engineer"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:81
+#: pyconca2017/templates/pages/home.html:79
 msgid ""
 "\n"
 "          Lynn Root is a Site Reliability Engineer at Spotify; but in "
@@ -549,11 +544,11 @@ msgstr ""
 "d'aiguilles à tricoter.\n"
 "        "
 
-#: pyconca2017/templates/pages/home.html:99
+#: pyconca2017/templates/pages/home.html:97
 msgid "Managing Directory and Head of Platform Engineering"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:101
+#: pyconca2017/templates/pages/home.html:99
 msgid ""
 "\n"
 "            Camille Fournier is a Managing Director and Head of Platform "
@@ -567,7 +562,7 @@ msgstr ""
 "Two Sigma. Elle est l'ancienne Chief Technology Officer de Rent The Runway "
 "et ancienne Vice Présidente Technology a Goldman Sachs."
 
-#: pyconca2017/templates/pages/home.html:107
+#: pyconca2017/templates/pages/home.html:105
 msgid ""
 "\n"
 "            Fournier earned an undergraduate degree from Carnegie Mellon "
@@ -589,11 +584,11 @@ msgstr ""
 "pour une plus grande diversité au sein des technologies et de la direction. "
 "Son livre, \"The Manager's Path\" a été publié par O'Reilly debut 2017."
 
-#: pyconca2017/templates/pages/home.html:121
+#: pyconca2017/templates/pages/home.html:119
 msgid "Software Engineer"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:122
+#: pyconca2017/templates/pages/home.html:120
 msgid ""
 "\n"
 "          Julia Evans is a software engineer at Stripe. In her spare time, "
@@ -616,15 +611,35 @@ msgstr ""
 "Elle pense qu'il est important de comprendre comment les bases d'un système "
 "fonctionnent."
 
-#: pyconca2017/templates/pages/home.html:145
+#: pyconca2017/templates/pages/home.html:138
+msgid "Python Core Developer & Software Engineer at Sony Pictures Imageworks"
+msgstr ""
+
+#: pyconca2017/templates/pages/home.html:140
+msgid ""
+"\n"
+"            Mariatta is a Python Core Developer and a Software Engineer at "
+"Sony Pictures Imageworks. She helps organize\n"
+"            Vancouver PyLadies and PyCascades conference. She moved to "
+"Canada almost two decades ago and now considers\n"
+"            Vancouver as her home.\n"
+"          "
+msgstr ""
+"\n"
+"Développeuse Python Core et ingénieure logiciel chez Sony Pictures "
+"Imageworks. Elle aide à l'organisation de PyLadies à Vancouver et à la "
+"conférence PyCascades. Elle a déménagé au Canada il y a près de deux "
+"décénies et considère maintenant Vancouver comme sa maison."
+
+#: pyconca2017/templates/pages/home.html:160
 msgid "subscribe to our mailing list"
 msgstr "Abonnez-Vous À Notre Liste D'Envoi"
 
-#: pyconca2017/templates/pages/home.html:149
+#: pyconca2017/templates/pages/home.html:164
 msgid "Receive all event details as they become available"
 msgstr "Recevez tous les détails de l'événement dès qu'ils sont disponibles"
 
-#: pyconca2017/templates/pages/home.html:153
+#: pyconca2017/templates/pages/home.html:168
 msgid "Subscribe"
 msgstr "Souscrire"
 
@@ -703,6 +718,11 @@ msgstr ""
 #: pyconca2017/utils/models.py:13
 msgid "date updated"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Submit a Talk Proposal"
+#~ msgid "Submit a Proposal"
+#~ msgstr "Soumettre une présentation"
 
 #, fuzzy
 #~| msgid "Submit a Talk Proposal"
