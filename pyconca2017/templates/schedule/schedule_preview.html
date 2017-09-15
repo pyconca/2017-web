@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+{% block content %}
+
+  <div class="container">
+    <h1>Schedule (preview)</h1>
+
+    <table style="border: 1px solid; width: 100%">
+      <tbody>
+      {% for slot in schedule.slots.all %}
+        {% for event in slot.events.all %}
+          <tr style="border: 1px solid;">
+            {% if forloop.first %}<td rowspan="{{ slot.events.count }}" style="padding: 3rem;">{{ slot }}</td>{% endif %}
+            <td style="padding: 3rem;">
+              {{ event }}
+              <br/>
+              {{ event.location }} | {{ event.duration_str }} {{ event.presenter }}
+            </td>
+          </tr>
+        {% endfor %}
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}

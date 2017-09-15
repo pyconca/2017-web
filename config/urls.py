@@ -19,6 +19,7 @@ urlpatterns = [
     url(r'^fa/$', TemplateView.as_view(template_name='pages/fa.html'), name='fa'),
     url(r'^sponsors/', include('pyconca2017.pycon_sponsors.urls', namespace='sponsors')),
     url(r'^schedule/$', TemplateView.as_view(template_name='pages/schedule.html'), name='schedule'),
+    url(r'^schedule/', include('pyconca2017.pycon_schedule.urls', namespace='schedule')),
     url(r'^code-of-conduct/$', TemplateView.as_view(template_name='pages/code_of_conduct.html'),
         name='code-of-conduct'),
 
