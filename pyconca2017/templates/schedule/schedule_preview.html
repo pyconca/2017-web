@@ -4,6 +4,15 @@
 {% block content %}
 
   <div class="container">
+
+    {% for sch in schedules_all %}
+      {% if sch == schedule %}
+        <span>{{ sch.day }}</span>
+      {% else %}
+        <a href="{% url 'schedule:detail' sch.day %}">{{ sch.day }}</a>
+      {% endif %}
+    {% endfor %}
+
     <h1>Schedule (preview)</h1>
 
     <table style="border: 1px solid; width: 100%">
@@ -11,7 +20,8 @@
       {% for slot in schedule.slots.all %}
         {% for event in slot.events.all %}
           <tr style="border: 1px solid;">
-            {% if forloop.first %}<td rowspan="{{ slot.events.count }}" style="padding: 3rem;">{{ slot }}</td>{% endif %}
+            {% if forloop.first %}
+              <td rowspan="{{ slot.events.count }}" style="padding: 3rem;">{{ slot.start_time | time:"H:i" }}</td>{% endif %}
             <td style="padding: 3rem;">
               {{ event }}
               <br/>
