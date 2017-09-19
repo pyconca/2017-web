@@ -10,6 +10,7 @@ ORGANIZERS = {
     ('Anarosa Paredes', 'https://twitter.com/aarosered'),
     ('Lauren McCormick', ''),
     ('David Wolever', 'https://twitter.com/wolever'),
+    ('Juti Noppornpitak', 'https://www.shiroyuki.com'),
     # Add you name and url here ^ and submit a pull request
     # Order does not matter, final result is sorted by name
 }
