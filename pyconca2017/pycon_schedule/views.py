@@ -4,11 +4,11 @@ from django.http import Http404
 from django.views.generic import TemplateView, RedirectView
 from django.urls import NoReverseMatch, reverse
 
-from pyconca2017.pycon_schedule.models import Schedule
+from pyconca2017.pycon_schedule.models import Schedule, Location
 
 
 class ScheduleView(TemplateView):
-    template_name = 'schedule/schedule_preview.html'
+    template_name = 'schedule/schedule.html'
 
     def get_queryset(self):
         return Schedule.objects.prefetch_related(
@@ -28,6 +28,7 @@ class ScheduleView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['schedules_all'] = Schedule.objects.order_by('day')
         context['schedule'] = schedule.get()
+        context['locations'] = Location.objects.all() # TODO: only show locations for given day.
 
         return context
 
@@ -52,4 +53,3 @@ class ScheduleRedirectView(RedirectView):
             raise Http404
 
         return url
-

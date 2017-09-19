@@ -1,0 +1,36 @@
+{% if slot.kind.label == "talk" or slot.kind.label == "tutorial" or slot.kind.label == "keynote" %}
+    {% if not slot.content %}
+    {{ slot.content_override|safe }}
+    {% if user.is_authenticated %}
+    <small class="admin_link">
+        (<a href="{% url 'admin:schedule_presentation_add' %}?slot={{ slot.pk }}">Add Presentation</a>)
+    </small>
+    {% endif %}
+    {% else %}
+        <span class="title">
+            <a href="{{ slot.content.get_absolute_url }}">{{ slot.content.title }}</a> {{ slot.content_override|safe }}
+        </span>
+        <span class="speaker">
+            {{ slot.content.speakers|join:", " }}
+        </span>
+        {% if user.is_authenticated %}
+        <small class="admin_link">
+            (<a href="{% url 'admin:schedule_presentation_change' slot.content.pk %}">Edit Presentation</a>)
+        </small>
+        {% endif %}
+    {% endif %}
+{% else %}
+    {% if slot.content_override %}
+        {{ slot.content_override|safe }}
+    {% else %}
+        {{ slot.kind.label }}
+    {% endif %}
+{% endif %}
+<span class="fake-room">
+    {% for room in slot.rooms %}{{ room }}{% endfor %}
+</span>
+{% if user.is_authenticated %}
+<small class="admin_link">
+    (<a href="{% url 'admin:schedule_slot_change' slot.pk %}">Edit Slot</a>)
+</small>
+{% endif %}
