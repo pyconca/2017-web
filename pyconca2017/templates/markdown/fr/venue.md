@@ -1,9 +1,15 @@
 # Se rendre à Montréal
 
+## Avion
 L'aéroport Pierre-Élliot Trudeau est une très bonne façon de se rendre à Montréal. Montréal-Trudeau est un aéroport 
 internationnal et est l'endroit pour tous les vols nationnaux et internationnaux. Cela prend environ 25 minutes de 
 voiture de l'aéroport jusqu'à l'Université du Québec à Montréal. Le service de navette 747 peut vous amener 
 de l'aéroport à quelques coins de rue du lieu de la conférence pour 10$.
+
+## Train
+VIA Rail offre un rabais de 10% sur les billets de train pour les participants
+de PyCon Canada 2017 voyageant entre le 16 novembre 2017 au 23 novembre 2017 en
+direction de Montréal. Utilisez le code de rabais suivant: 13579.
 
 # Transport en commun
 
