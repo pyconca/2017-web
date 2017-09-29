@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+{% block content %}
+<div class="container">
+  <div class="">
+    <h1>
+      {{ presentation.title }}
+    </h1>
+    {% if presentation.abstract %}
+    <p class="lead">
+      {{ presentation.abstract }}
+    </p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="container">
+  <div class="">
+    {{ presentation.description }}
+  </div>
+</div>
+{% endblock %}

@@ -4,7 +4,7 @@ from django.http import Http404
 from django.views.generic import TemplateView, RedirectView
 from django.urls import NoReverseMatch, reverse
 
-from pyconca2017.pycon_schedule.models import Schedule, Location
+from pyconca2017.pycon_schedule.models import Schedule, Location, Presentation
 
 
 class ScheduleView(TemplateView):
@@ -53,3 +53,20 @@ class ScheduleRedirectView(RedirectView):
             raise Http404
 
         return url
+
+
+class PresentationView(TemplateView):
+
+    template_name = 'schedule/presentation.html'
+
+    def get_queryset(self):
+        return Presentation.objects.prefetch_related()
+
+    def get_context_data(self, **kwargs):
+        presentation_pk = kwargs.get('presentation_pk')
+        presentation = self.get_queryset().filter(pk=presentation_pk)
+
+        context = super().get_context_data(**kwargs)
+        context['presentation'] = presentation.get()
+
+        return context

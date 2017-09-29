@@ -38,7 +38,13 @@
           </td>
           {% for event in slot.events.all %}
           <td {% if slot.events.all.count == 1 %}colspan="4"{% endif %}>
-              {{ event }}
+          {% if event.presentation %}
+            <a href="{{ event.presentation.get_absolute_url }}">
+              {{ event.presentation }}
+            </a>
+          {% else %}
+            {{ event }}
+          {% endif %}
           </td>
           {% endfor %}
           {% if forloop.last %}
