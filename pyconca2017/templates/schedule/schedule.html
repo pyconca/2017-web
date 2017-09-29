@@ -37,12 +37,12 @@
           {% endif %}
           </td>
           {% for event in slot.events.all %}
-          <td>
+          <td {% if slot.events.all.count == 1 %}colspan="4"{% endif %}>
               {{ event }}
           </td>
           {% endfor %}
           {% if forloop.last %}
-              <!-- <td colspan="{{ timetable.rooms|length }}"></td> -->
+              <!-- <td colspan="{{ slot.rooms|length }}"></td> -->
           {% endif %}
         </tr>
         {% endfor %}
