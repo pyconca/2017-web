@@ -8,7 +8,7 @@ from pyconca2017.pycon_schedule.models import Schedule, Location, Presentation
 
 
 class ScheduleView(TemplateView):
-    template_name = 'schedule/schedule.html'
+    template_name = 'schedule/schedule_preview.html'
 
     def get_queryset(self):
         return Schedule.objects.prefetch_related(

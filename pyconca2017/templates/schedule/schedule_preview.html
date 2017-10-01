@@ -5,30 +5,43 @@
 
   <div class="container">
 
-    {% for sch in schedules_all %}
-      {% if sch == schedule %}
-        <span>{{ sch.day }}</span>
-      {% else %}
-        <a href="{% url 'schedule:detail' sch.day %}">{{ sch.day }}</a>
-      {% endif %}
-    {% endfor %}
+    <div class="schedule-nav">
+      {% for sch in schedules_all %}
+        {% if sch == schedule %}
+          <span class="schedule-nav--current">{{ sch.day | date:"l, F j" }}</span>
+        {% else %}
+          <a class="schedule-nav--link" href="{% url 'schedule:detail' sch.day %}">{{ sch.day | date:"l, F j" }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
 
-    <h1>Schedule (preview)</h1>
-
-    <table style="border: 1px solid; width: 100%">
+    <table class="schedule-table">
       <tbody>
       {% for slot in schedule.slots.all %}
-        {% for event in slot.events.all %}
-          <tr style="border: 1px solid;">
-            {% if forloop.first %}
-              <td rowspan="{{ slot.events.count }}" style="padding: 3rem;">{{ slot.start_time | time:"H:i" }}</td>{% endif %}
-            <td style="padding: 3rem;">
-              {{ event }}
-              <br/>
-              {{ event.location }} | {{ event.duration_str }} {{ event.presenter }}
-            </td>
-          </tr>
-        {% endfor %}
+        {% ifchanged slot.start_time %}
+          {% for event in slot.start_events.all %}
+            <tr class="schedule-table--row">
+              {% if forloop.first %}
+                <td rowspan="{{ slot.start_events.count }}"
+                    class="schedule-table--col-time">{{ slot.start_time | time:"H:i" }}
+                </td>
+              {% endif %}
+              <td class="schedule-table--col-description">
+                <h2 class="schedule-table--title{% if not event.is_presentation %}--muted{% endif %}">
+                  {% if event.is_presentation %}
+                    <a href="{% url 'schedule:presentation' event.presentation.id %}">{{ event }}</a>
+                  {% else %}
+                    {{ event }}
+                  {% endif %}
+                </h2>
+                {% if event.location %}<span class="schedule-table--subtitle">{{ event.location }}</span>
+                  <span class="schedule-table--subtitle--muted"> | </span>{% endif %}
+                <span class="schedule-table--subtitle--muted">{{ event.duration_str }}{% if event.presenter %} -
+                  {{ event.presenter }}{% endif %}</span>
+              </td>
+            </tr>
+          {% endfor %}
+        {% endifchanged %}
       {% endfor %}
       </tbody>
     </table>

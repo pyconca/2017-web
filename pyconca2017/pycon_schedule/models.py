@@ -85,11 +85,15 @@ class ScheduleSlot(models.Model):
     def duration(self):
         return datetime.combine(self.schedule.day, self.end_time) - datetime.combine(self.schedule.day, self.start_time)
 
+    @property
+    def start_events(self):
+        return SlotEvent.objects.filter(slot__schedule=self.schedule, slot__start_time=self.start_time)
+
 
 class SlotEvent(models.Model):
     """ Glue what with when and where """
     slot = models.ForeignKey(ScheduleSlot, related_name='events')
-    location = models.ForeignKey(Location)
+    location = models.ForeignKey(Location, null=True, blank=True)
     content = models.TextField(blank=True)
 
     presentation = models.OneToOneField(Presentation, null=True, blank=True)
@@ -108,6 +112,10 @@ class SlotEvent(models.Model):
             return self.presentation.title
 
         return self.content
+
+    @property
+    def is_presentation(self):
+        return bool(self.presentation)
 
     @property
     def duration(self):
