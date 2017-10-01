@@ -37,4 +37,4 @@ class LocationAdmin(ModelAdmin):
 @register(SlotEvent)
 class SlotEventAdmin(ModelAdmin):
     list_display = ('__str__', 'location', 'slot', 'presentation', 'presenter')
-    ordering = ('slot__schedule', 'slot__start_time', 'slot__end_time')
+    ordering = ('slot__schedule__day', 'slot__start_time', 'slot__end_time', 'location')
