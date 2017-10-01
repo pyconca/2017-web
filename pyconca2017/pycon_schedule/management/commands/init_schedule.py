@@ -143,7 +143,7 @@ class Command(BaseCommand):
                     content = slot.get('content')
                     room = slot.get('room')
                     if room or content:
-                        location = Location.objects.create(name=room) if room else None
+                        location = Location.objects.get_or_create(name=room)[0] if room else None
                         SlotEvent.objects.create(
                             slot=slot_obj,
                             content=content or '',
