@@ -28,5 +28,5 @@ class WebPagesTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_schedule(self):
-        response = self.client.get(self.reverse('schedule'))
-        self.assertEqual(response.status_code, 200)
+        response = self.client.get(self.reverse('schedule:current'))
+        self.assertEqual(response.status_code, 404)
