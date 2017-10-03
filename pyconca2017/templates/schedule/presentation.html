@@ -1,23 +1,34 @@
 {% extends "base.html" %}
-{% load i18n staticfiles %}
+{% load i18n staticfiles bleach_tags %}
 
 {% block content %}
-<div class="container">
-  <div class="">
-    <h1>
-      {{ presentation.title }}
-    </h1>
-    {% if presentation.abstract %}
-    <p class="lead">
-      {{ presentation.abstract }}
-    </p>
-    {% endif %}
+  <div class="container">
+    <div class="">
+      <h1>
+        {{ presentation.title }}
+      </h1>
+    </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="">
-    {{ presentation.description }}
+  <div class="container">
+    <div class="">
+      {{ presentation.description_html | safe }}
+    </div>
   </div>
-</div>
+
+  <div class="container">
+    <hr/>
+    <strong class="text-muted">{% trans 'Speaker' %}</strong>
+    <h2>{{ presentation.speaker }}</h2>
+    {% if presentation.speaker.twitter_url %}
+      <a href="{{ presentation.speaker.twitter_url }}" class="twitter-follow-button" data-size="large"
+         data-show-count="false">Follow @{{ presentation.speaker.twitter_username }}</a>
+      <a href="{{ presentation.speaker.twitter_url }}" target="_blank"></a>
+    {% endif %}
+    <div>
+      {{ presentation.speaker.bio_html | safe }}
+    </div>
+  </div>
+
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 {% endblock %}

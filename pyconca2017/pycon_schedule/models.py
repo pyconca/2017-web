@@ -1,5 +1,7 @@
 from datetime import datetime
 
+import bleach
+import markdown
 from django.db import models
 
 
@@ -28,6 +30,9 @@ class Speaker(models.Model):
 
         return 'https://twitter.com/{}'.format(self.twitter_username)
 
+    def bio_html(self):
+        return markdown.markdown(bleach.clean(self.bio), extensions=["extra"], safe_mode=False)
+
 
 class Presentation(models.Model):
     """ What """
@@ -48,6 +53,9 @@ class Presentation(models.Model):
     class Meta:
         ordering = ('title',)
 
+    def description_html(self):
+        return markdown.markdown(bleach.clean(self.description), extensions=["extra"], safe_mode=False)
+
 
 """ Schedule """
 
@@ -62,10 +70,24 @@ class Schedule(models.Model):
 
 class Location(models.Model):
     """ Where """
+    class Tracks(object):
+        TRACK_ONE = 'track-1'
+        TRACK_TWO = 'track-2'
+        TRACK_THREE = 'track-3'
+        TRACK_TUTORIAL = 'tutorial'
+
+        choices = (
+            (TRACK_ONE, 'Track 1'),
+            (TRACK_TWO, 'Track 2'),
+            (TRACK_THREE, 'Track 3'),
+            (TRACK_TUTORIAL, 'Tutorial'),
+        )
+
     name = models.CharField(max_length=255)
     order = models.PositiveIntegerField(default=0)
     capacity = models.PositiveIntegerField(default=0)
     notes = models.TextField(default='', blank=True)
+    track = models.CharField(max_length=255, choices=Tracks.choices, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -76,6 +98,8 @@ class ScheduleSlot(models.Model):
     schedule = models.ForeignKey(Schedule, related_name='slots')
     start_time = models.TimeField()
     end_time = models.TimeField()
+
+    ref = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return '{} - {} ({})'.format(self.start_time, self.end_time, self.schedule)

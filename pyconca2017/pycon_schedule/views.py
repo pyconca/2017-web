@@ -1,12 +1,16 @@
 from datetime import date
 
 from django.http import Http404
-from django.views.generic import TemplateView, RedirectView
+from django.views.generic import TemplateView, RedirectView, FormView
 from django.urls import NoReverseMatch, reverse
+from django.utils.decorators import method_decorator
+from django.contrib.admin.views.decorators import staff_member_required
 
 from pyconca2017.pycon_schedule.models import Schedule, Location, Presentation
+from pyconca2017.pycon_schedule.forms import AssignCSVForm
 
 
+@method_decorator(staff_member_required, name='dispatch')
 class ScheduleView(TemplateView):
     template_name = 'schedule/schedule_preview.html'
 
@@ -19,7 +23,6 @@ class ScheduleView(TemplateView):
         )
 
     def get_context_data(self, **kwargs):
-        print(kwargs)
         schedule_date = kwargs.get('schedule_date')
         schedule = self.get_queryset().filter(day=schedule_date)
         if not schedule_date or not schedule.exists():
@@ -70,3 +73,14 @@ class PresentationView(TemplateView):
         context['presentation'] = presentation.get()
 
         return context
+
+
+@method_decorator(staff_member_required, name='dispatch')
+class AssignFromCSVView(FormView):
+    form_class = AssignCSVForm
+    template_name = 'schedule/admin/form.html'
+    success_url = '/schedule'
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
