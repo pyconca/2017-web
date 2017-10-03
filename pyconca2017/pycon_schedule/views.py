@@ -31,11 +31,12 @@ class ScheduleView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['schedules_all'] = Schedule.objects.order_by('day')
         context['schedule'] = schedule.get()
-        context['locations'] = Location.objects.all() # TODO: only show locations for given day.
+        context['locations'] = Location.objects.all()  # TODO: only show locations for given day.
 
         return context
 
 
+@method_decorator(staff_member_required, name='dispatch')
 class ScheduleRedirectView(RedirectView):
     permanent = True
     pattern_name = 'schedule:detail'
@@ -46,7 +47,8 @@ class ScheduleRedirectView(RedirectView):
             raise Http404
 
         try:
-            schedule_day = Schedule.objects.filter(day__gte=date.today()).order_by('day').first().day.strftime('%Y-%m-%d')
+            schedule_day = Schedule.objects.filter(day__gte=date.today()).order_by('day').first().day.strftime(
+                '%Y-%m-%d')
         except Schedule.DoesNotExist:
             schedule_day = Schedule.objects.order_by('day').first().day.strftime('%Y-%m-%d')
 
@@ -58,8 +60,8 @@ class ScheduleRedirectView(RedirectView):
         return url
 
 
+@method_decorator(staff_member_required, name='dispatch')
 class PresentationView(TemplateView):
-
     template_name = 'schedule/presentation.html'
 
     def get_queryset(self):
