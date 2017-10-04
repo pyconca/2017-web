@@ -30,7 +30,7 @@ Hotel Travelodge Montréal Centre,<br/>
 Situé en plein cœur du centre-ville, l’Hôtel Travelodge Montréal Centre est une destination de choix pour profiter pleinement de notre belle ville. En plus des nombreuses attractions à proximité, l’hôtel est à deux pas des stations de métro Place d’Armes (ligne orange) et Saint-Laurent (ligne verte). L’Hôtel Travelodge Montréal Centre offre un petit-déjeuner continental style buffet, le Wi-Fi gratuit et l’accès gratuit à notre nouvelle salle de gym!
 
 Par courriel:
-<reserve@travelodgemontreal.ca> (Merci de mentionner le nom du bloc : Pycon Canada & Block ID: 482 452)
+<mailto:reserve@travelodgemontreal.ca> (Merci de mentionner le nom du bloc : Pycon Canada & Block ID: 482 452)
 
 Par téléphone:
 514-874-9090, option 1 (Merci de mentionner le nom du bloc : Pycon Canada & Block ID: 482 452)
