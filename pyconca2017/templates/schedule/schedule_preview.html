@@ -7,10 +7,19 @@
 
     <div class="schedule-nav">
       {% for sch in schedules_all %}
-        {% if sch == schedule %}
-          <span class="schedule-nav--current">{{ sch.day | date:"l, F j" }}</span>
+
+        {% if LANGUAGE_CODE == 'fr' %}
+          {% if sch == schedule %}
+            <span class="schedule-nav--current">{{ sch.day | date:"l, j F" }}</span>
+          {% else %}
+            <a class="schedule-nav--link" href="{% url 'schedule:detail' sch.day %}">{{ sch.day | date:"l, j F" }}</a>
+          {% endif %}
         {% else %}
-          <a class="schedule-nav--link" href="{% url 'schedule:detail' sch.day %}">{{ sch.day | date:"l, F j" }}</a>
+          {% if sch == schedule %}
+            <span class="schedule-nav--current">{{ sch.day | date:"l, F j" }}</span>
+          {% else %}
+            <a class="schedule-nav--link" href="{% url 'schedule:detail' sch.day %}">{{ sch.day | date:"l, F j" }}</a>
+          {% endif %}
         {% endif %}
       {% endfor %}
     </div>

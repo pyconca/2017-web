@@ -16,7 +16,7 @@ class SpeakerAdmin(ModelAdmin):
 
 @register(Presentation)
 class PresentationAdmin(ModelAdmin):
-    pass
+    list_display = ('__str__', 'speaker', 'audience_level', 'presentation_format', 'papercall_id')
 
 
 @register(Schedule)
@@ -26,12 +26,12 @@ class ScheduleAdmin(ModelAdmin):
 
 @register(ScheduleSlot)
 class ScheduleSlotAdmin(ModelAdmin):
-    list_display = ('__str__', 'schedule', 'start_time', 'end_time', 'duration')
+    list_display = ('__str__', 'ref', 'schedule', 'start_time', 'end_time', 'duration')
 
 
 @register(Location)
 class LocationAdmin(ModelAdmin):
-    list_display = ('name', 'order', 'capacity')
+    list_display = ('name', 'track', 'order', 'capacity')
 
 
 @register(SlotEvent)
