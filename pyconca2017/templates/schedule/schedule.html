@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+{% block content %}
+<div class="container">
+  <ul class="nav">
+    {% for sch in schedules_all %}
+      <li class="nav-item">
+        {% if sch == schedule %}
+          <a class="nav-link disabled" href="{% url 'schedule:detail' sch.day %}">{{ sch.day }}</a>
+        {% else %}
+          <a class="nav-link" href="{% url 'schedule:detail' sch.day %}">{{ sch.day }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h1>{{ schedule.day|date:"l j F, Y" }}</h1>
+
+  <table class="calendar table table-bordered">
+      <thead>
+          <tr>
+              <th class="time">&nbsp;</th>
+              {% for room in locations %}
+                  <th>{{ room.name }}</th>
+              {% endfor %}
+          </tr>
+      </thead>
+      <tbody>
+        {% for slot in schedule.slots.all %}
+        <tr>
+          <td>
+          {% if LANGUAGE_CODE == 'fr' %}
+            {{ slot.start_time|date:"H\hi" }}
+          {% else %}
+            {{ slot.start_time|date:"fA" }}
+          {% endif %}
+          </td>
+          {% for event in slot.events.all %}
+          <td {% if slot.events.all.count == 1 %}colspan="4"{% endif %}>
+          {% if event.presentation %}
+            <a href="{{ event.presentation.get_absolute_url }}">
+              {{ event.presentation }}
+            </a>
+          {% else %}
+            {{ event }}
+          {% endif %}
+          </td>
+          {% endfor %}
+          {% if forloop.last %}
+              <!-- <td colspan="{{ slot.rooms|length }}"></td> -->
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+{% endblock content %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+{% block content %}
+
+  <div class="container">
+
+    <div class="schedule-nav">
+      {% for sch in schedules_all %}
+
+        {% if LANGUAGE_CODE == 'fr' %}
+          {% if sch == schedule %}
+            <span class="schedule-nav--current">{{ sch.day | date:"l, j F" }}</span>
+          {% else %}
+            <a class="schedule-nav--link" href="{% url 'schedule:detail' sch.day %}">{{ sch.day | date:"l, j F" }}</a>
+          {% endif %}
+        {% else %}
+          {% if sch == schedule %}
+            <span class="schedule-nav--current">{{ sch.day | date:"l, F j" }}</span>
+          {% else %}
+            <a class="schedule-nav--link" href="{% url 'schedule:detail' sch.day %}">{{ sch.day | date:"l, F j" }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <table class="schedule-table">
+      <tbody>
+      {% for slot in schedule.slots.all %}
+        {% ifchanged slot.start_time %}
+          {% for event in slot.start_events.all %}
+            <tr class="schedule-table--row">
+              {% if forloop.first %}
+                <td rowspan="{{ slot.start_events.count }}"
+                    class="schedule-table--col-time">{{ slot.start_time | time:"H:i" }}
+                </td>
+              {% endif %}
+              <td class="schedule-table--col-description">
+                <h2 class="schedule-table--title{% if not event.is_presentation %}--muted{% endif %}">
+                  {% if event.is_presentation %}
+                    <a href="{% url 'schedule:presentation' event.presentation.id %}">{{ event }}</a>
+                  {% else %}
+                    {{ event }}
+                  {% endif %}
+                </h2>
+                {% if event.location %}<span class="schedule-table--subtitle">{{ event.location }}</span>
+                  <span class="schedule-table--subtitle--muted"> | </span>{% endif %}
+                <span class="schedule-table--subtitle--muted">{{ event.duration_str }}{% if event.presenter %} -
+                  {{ event.presenter }}{% endif %}</span>
+              </td>
+            </tr>
+          {% endfor %}
+        {% endifchanged %}
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}
