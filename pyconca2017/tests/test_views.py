@@ -1,4 +1,7 @@
 from test_plus.test import TestCase
+from datetime import date
+
+from pyconca2017.pycon_schedule.models import Schedule
 
 
 class WebPagesTests(TestCase):
@@ -28,5 +31,11 @@ class WebPagesTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_schedule(self):
+        Schedule.objects.create(day=date(2017, 10, 10))
         response = self.client.get(self.reverse('schedule:current'))
+        self.assertEqual(response.status_code, 301)
+
+    def test_schedule(self):
+        Schedule.objects.create(day=date(2017, 10, 10))
+        response = self.client.get(self.reverse('schedule:detail', schedule_date='2017-10-10'))
         self.assertEqual(response.status_code, 200)
