@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-14 00:17-0400\n"
+"POT-Creation-Date: 2017-10-05 08:55-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -300,13 +300,17 @@ msgid ""
 "Join your fellow Pythonistas for the fifth annual PyCon Canada, a weekend of "
 "talks, activities, fun and code!"
 msgstr ""
-"Pythoneux et pythoneuses, rejoignez-nous pour la cinquième conférence "
-"PyCon Canada, une find de semaine de présentations, d'activités, de fun "
-"et de code!"
+"Pythoneux et pythoneuses, rejoignez-nous pour la cinquième conférence PyCon "
+"Canada, une find de semaine de présentations, d'activités, de fun et de code!"
 
 #: pyconca2017/templates/components/layout/footer.html:6
 msgid "Event"
 msgstr "Évènement"
+
+#: pyconca2017/templates/components/layout/footer.html:11
+#: pyconca2017/templates/components/layout/header.html:30
+msgid "Schedule"
+msgstr "Horaire"
 
 #: pyconca2017/templates/components/layout/footer.html:17
 #: pyconca2017/templates/components/layout/header.html:36
@@ -522,10 +526,10 @@ msgstr ""
 "\n"
 "Lynn Root est ingénieure Site Reliability chez Spotify; mais en réalité, "
 "elle a plutôt tendance à briser les choses plutôt que de les rendre plus "
-"fiables. Lynn est aussi une des organisatrices internationales de PyLadies, et "
-"fondatrice ainsi qu'ancienne dirigeante de PyLadies San Francisco. Quand ses mains "
-"ne tapent pas sur un clavier, elles tiennent la plupart du temps une paire "
-"d'aiguilles à tricoter.\n"
+"fiables. Lynn est aussi une des organisatrices internationales de PyLadies, "
+"et fondatrice ainsi qu'ancienne dirigeante de PyLadies San Francisco. Quand "
+"ses mains ne tapent pas sur un clavier, elles tiennent la plupart du temps "
+"une paire d'aiguilles à tricoter.\n"
 "        "
 
 #: pyconca2017/templates/pages/home.html:99
@@ -592,8 +596,8 @@ msgstr ""
 "ce qu'elle apprend (souvent à propos de programmation système!), et publie "
 "des zines sur <a href=\"https://jvns.ca/zines\" target=\"_blank\">https://"
 "jvns.ca/zines.</a>\n"
-"Elle pense qu'il est important de comprendre comment les bases du fonctionnement "
-"de ses systèmes."
+"Elle pense qu'il est important de comprendre comment les bases du "
+"fonctionnement de ses systèmes."
 
 #: pyconca2017/templates/pages/home.html:140
 msgid "Python Core Developer & Software Engineer at Sony Pictures Imageworks"
@@ -690,6 +694,10 @@ msgstr ""
 #: pyconca2017/templates/pages/volunteer.html:15
 msgid "Volunteer for PyCon Canada"
 msgstr "Soyez bénévole à PyCon Canada"
+
+#: pyconca2017/templates/schedule/presentation.html:21
+msgid "Speaker"
+msgstr "Présentateur"
 
 #: pyconca2017/users/models.py:17
 msgid "Name of User"
