@@ -6,11 +6,11 @@
       {% trans "Event" %}
     </li>
 
-    {#      <li class="c-foot__item">#}
-    {#        <a class="c-foot__link" href="javscript:void()">#}
-    {#          {% trans "Schedule" %}#}
-    {#        </a>#}
-    {#      </li>#}
+          <li class="c-foot__item">
+            <a class="c-foot__link" href="{% url 'schedule:current' %}">
+              {% trans "Schedule" %}
+            </a>
+          </li>
 
           <li class="c-foot__item">
             <a class="c-foot__link" href="{% url 'venue' %}">

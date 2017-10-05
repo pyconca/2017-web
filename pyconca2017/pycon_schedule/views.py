@@ -10,7 +10,6 @@ from pyconca2017.pycon_schedule.models import Schedule, Location, Presentation
 from pyconca2017.pycon_schedule.forms import AssignCSVForm
 
 
-@method_decorator(staff_member_required, name='dispatch')
 class ScheduleView(TemplateView):
     template_name = 'schedule/schedule_preview.html'
 
@@ -36,7 +35,6 @@ class ScheduleView(TemplateView):
         return context
 
 
-@method_decorator(staff_member_required, name='dispatch')
 class ScheduleRedirectView(RedirectView):
     permanent = True
     pattern_name = 'schedule:detail'
@@ -60,7 +58,6 @@ class ScheduleRedirectView(RedirectView):
         return url
 
 
-@method_decorator(staff_member_required, name='dispatch')
 class PresentationView(TemplateView):
     template_name = 'schedule/presentation.html'
 
