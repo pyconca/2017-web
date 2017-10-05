@@ -121,7 +121,8 @@ class SlotEvent(models.Model):
     """ Glue what with when and where """
     slot = models.ForeignKey(ScheduleSlot, related_name='events')
     location = models.ForeignKey(Location, null=True, blank=True)
-    content = models.TextField(blank=True)
+    content = models.TextField('Content (EN)', blank=True)
+    content_fr = models.TextField('Content (FR)', blank=True)
 
     presentation = models.OneToOneField(Presentation, null=True, blank=True)
 

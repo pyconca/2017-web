@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load i18n staticfiles %}
 
+{% get_current_language as LANGUAGE_CODE %}
+
 {% block content %}
 
   <div class="container">
@@ -38,9 +40,13 @@
               <td class="schedule-table--col-description">
                 <h2 class="schedule-table--title{% if not event.is_presentation %}--muted{% endif %}">
                   {% if event.is_presentation %}
-                    <a href="{% url 'schedule:presentation' event.presentation.id %}">{{ event }}</a>
+                    <a href="{% url 'schedule:presentation' event.presentation.id %}">{{ event.presentation.title }}</a>
                   {% else %}
-                    {{ event }}
+                    {% if LANGUAGE_CODE == 'fr' and event.content_fr %}
+                    {{ event.content_fr }}
+                    {% else %}
+                    {{ event.content }}
+                    {% endif %}
                   {% endif %}
                 </h2>
                 {% if event.location %}<span class="schedule-table--subtitle">{{ event.location }}</span>
