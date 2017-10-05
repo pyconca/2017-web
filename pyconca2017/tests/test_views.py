@@ -29,4 +29,4 @@ class WebPagesTests(TestCase):
 
     def test_schedule(self):
         response = self.client.get(self.reverse('schedule:current'))
-        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.status_code, 200)
