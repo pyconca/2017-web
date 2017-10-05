@@ -697,7 +697,7 @@ msgstr "Soyez bénévole à PyCon Canada"
 
 #: pyconca2017/templates/schedule/presentation.html:21
 msgid "Speaker"
-msgstr "Présenté par"
+msgstr "Présentée par"
 
 #: pyconca2017/users/models.py:17
 msgid "Name of User"
