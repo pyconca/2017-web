@@ -30,7 +30,7 @@ class WebPagesTests(TestCase):
         response = self.client.get(self.reverse('volunteer'))
         self.assertEqual(response.status_code, 200)
 
-    def test_schedule(self):
+    def test_schedule_current(self):
         Schedule.objects.create(day=date(2017, 10, 10))
         response = self.client.get(self.reverse('schedule:current'))
         self.assertEqual(response.status_code, 301)
