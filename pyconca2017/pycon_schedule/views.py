@@ -47,7 +47,7 @@ class ScheduleRedirectView(RedirectView):
         try:
             schedule_day = Schedule.objects.filter(day__gte=date.today()).order_by('day').first().day.strftime(
                 '%Y-%m-%d')
-        except Schedule.DoesNotExist:
+        except (Schedule.DoesNotExist, AttributeError):
             schedule_day = Schedule.objects.order_by('day').first().day.strftime('%Y-%m-%d')
 
         try:
