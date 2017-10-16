@@ -1,0 +1,1 @@
+Cette année, PyCon Canada se tiendra à l' [Université du Québec à Montréal](https://uqam.ca/) du 18 au 21 novembre 2017 à Montréal, Québec, Canada. L'événement est organisé en collaboration avec le [département d'informatique de l'UQÀM](http://info.uqam.ca/).
