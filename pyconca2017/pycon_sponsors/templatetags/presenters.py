@@ -33,10 +33,11 @@ def noval(data, placeholder):
 @register.simple_tag(takes_context=True)
 def include_md(context, template_name):
     lang = context['LANGUAGE_CODE'].replace('-', '_')
+
     try:
         t = loader.render_to_string('markdown/{}/{}'.format(lang, template_name), context)
     except TemplateDoesNotExist:
-        t = loader.render_to_string('markdown/en_US/{}'.format(template_name), context)
+        t = loader.render_to_string('markdown/en/{}'.format(template_name), context)
 
     html = markdown.markdown(t)
 
