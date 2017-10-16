@@ -83,3 +83,13 @@ class AssignFromCSVView(FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
+
+
+class SprintsView(TemplateView):
+    template_name = 'schedule/sprints.html'
+
+    def get_queryset(self):
+        return Schedule.objects.prefetch_related()
+
+    def get_context_data(self, **kwargs):
+        return {'schedules_all': self.get_queryset().all()}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n staticfiles bleach_tags %}
+
+{% block content %}
+  <div class="container">
+    <div class="schedule-nav">
+      {% for sch in schedules_all %}
+
+        {% if LANGUAGE_CODE == 'fr' %}
+          {% if sch == schedule %}
+            <span class="schedule-nav--current">{{ sch.day | date:"l, j F" }}</span>
+          {% else %}
+            <a class="schedule-nav--link" href="{% url 'schedule:detail' sch.day %}">{{ sch.day | date:"l, j F" }}</a>
+          {% endif %}
+        {% else %}
+          {% if sch == schedule %}
+            <span class="schedule-nav--current">{{ sch.day | date:"l, F j" }}</span>
+          {% else %}
+            <a class="schedule-nav--link" href="{% url 'schedule:detail' sch.day %}">{{ sch.day | date:"l, F j" }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      <span class="schedule-nav--current" href="{% url 'schedule:sprints' %}">{% trans 'Sprints' %}</span>
+    </div>
+
+    <div class="">
+      <h1>
+        {% trans 'Sprints' %}
+        <small>{% trans '20-21 November 2017' %}</small>
+      </h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="">
+      {% include_md 'sprints.md' %}
+
+      <div class="btn-group">
+        <a class="c-btn c-btn--primary" href="https://github.com/pyconca/2017-wiki/wiki/Sprints">{% trans "Find or Add a Project to the Wiki" %}</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
