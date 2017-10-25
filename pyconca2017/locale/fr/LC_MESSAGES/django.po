@@ -533,7 +533,7 @@ msgstr ""
 "        "
 
 #: pyconca2017/templates/pages/home.html:99
-msgid "Managing Directory and Head of Platform Engineering"
+msgid "Managing Director and Head of Platform Engineering"
 msgstr ""
 
 #: pyconca2017/templates/pages/home.html:101
