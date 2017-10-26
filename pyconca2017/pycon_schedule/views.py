@@ -6,7 +6,8 @@ from django.urls import NoReverseMatch, reverse
 from django.utils.decorators import method_decorator
 from django.contrib.admin.views.decorators import staff_member_required
 
-from pyconca2017.pycon_schedule.models import Schedule, Location, Presentation
+from pyconca2017.pycon_schedule.models import (Schedule, Location,
+                                               Presentation, SlotEvent)
 from pyconca2017.pycon_schedule.forms import AssignCSVForm
 
 
@@ -67,9 +68,11 @@ class PresentationView(TemplateView):
     def get_context_data(self, **kwargs):
         presentation_pk = kwargs.get('presentation_pk')
         presentation = self.get_queryset().filter(pk=presentation_pk)
+        slotevent = SlotEvent.objects.get(presentation=presentation)
 
         context = super().get_context_data(**kwargs)
         context['presentation'] = presentation.get()
+        context['slotevent'] = slotevent
 
         return context
 
