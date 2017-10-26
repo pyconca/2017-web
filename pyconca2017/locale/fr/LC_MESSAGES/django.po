@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-05 08:55-0400\n"
+"POT-Creation-Date: 2017-10-26 13:05-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -301,7 +301,13 @@ msgid ""
 "talks, activities, fun and code!"
 msgstr ""
 "Pythoneux et pythoneuses, rejoignez-nous pour la cinquième conférence PyCon "
-"Canada, une find de semaine de présentations, d'activités, de fun et de code!"
+"Canada, une fin de semaine de présentations, d'activités, de fun et de code!"
+
+#: pyconca2017/templates/base.html:92
+#, fuzzy
+#| msgid "subscribe to our mailing list"
+msgid "Subscribe to our newsletter."
+msgstr "abonnez-vous à notre liste d'envoi"
 
 #: pyconca2017/templates/components/layout/footer.html:6
 msgid "Event"
@@ -359,7 +365,13 @@ msgstr "Code de conduite"
 msgid "Contact"
 msgstr "Contact"
 
-#: pyconca2017/templates/components/layout/footer.html:84
+#: pyconca2017/templates/components/layout/footer.html:83
+#, fuzzy
+#| msgid "Newsletter"
+msgid "Newsletter Archive"
+msgstr "Infolettre"
+
+#: pyconca2017/templates/components/layout/footer.html:90
 msgid "Follow us"
 msgstr "Suivez-nous"
 
@@ -369,8 +381,14 @@ msgid "Our Sponsors"
 msgstr "Nos commanditaires"
 
 #: pyconca2017/templates/components/layout/header.html:10
-msgid "Montréal"
-msgstr "Montréal"
+#, fuzzy
+#| msgid ""
+#| "This year, PyCon Canada will be held November 18-21, 2017 in Montreal, "
+#| "Quebec, Canada."
+msgid "Université du Québec à Montréal, Montreal, Quebec, Canada"
+msgstr ""
+"Cette année, PyCon Canada se tiendra du 18 au 21 novembre 2017 à Montréal, "
+"Québec, Canada."
 
 #: pyconca2017/templates/components/layout/header.html:11
 #: pyconca2017/templates/pages/home.html:12
@@ -631,6 +649,15 @@ msgstr "Recevez tous les détails de l'événement dès qu'ils sont disponibles"
 msgid "Subscribe"
 msgstr "S'abonner"
 
+#: pyconca2017/templates/pages/home.html:181
+msgid "Sprints<br/>20-21 November"
+msgstr ""
+
+#: pyconca2017/templates/pages/home.html:189
+#: pyconca2017/templates/schedule/sprints.html:39
+msgid "Find or Add a Project to the Wiki"
+msgstr ""
+
 #: pyconca2017/templates/pages/sponsors.html:16
 msgid ""
 "\n"
@@ -653,18 +680,6 @@ msgstr "Télécharger le prospectus de commandite"
 #: pyconca2017/templates/pages/venue.html:9
 msgid "Location"
 msgstr "Emplacement"
-
-#: pyconca2017/templates/pages/venue.html:10
-#, fuzzy
-#| msgid ""
-#| "This year, PyCon Canada will be held November 18-21, 2017 in Montreal, "
-#| "Quebec, Canada."
-msgid ""
-"PyCon Canada 2017 is being held at Université du Québec à Montréal from "
-"18-21 November 2017 in Montréal, Québec, Canada."
-msgstr ""
-"Cette année, PyCon Canada se tiendra du 18 au 21 novembre 2017 à Montréal, "
-"Québec, Canada."
 
 #: pyconca2017/templates/pages/volunteer.html:9
 msgid "Volunteering at PyCon Canada 2017"
@@ -699,6 +714,18 @@ msgstr "Soyez bénévole à PyCon Canada"
 msgid "Speaker"
 msgstr "Présentée par"
 
+#: pyconca2017/templates/schedule/schedule_preview.html:27
+#: pyconca2017/templates/schedule/sprints.html:23
+#: pyconca2017/templates/schedule/sprints.html:28
+msgid "Sprints"
+msgstr ""
+
+#: pyconca2017/templates/schedule/sprints.html:29
+#, fuzzy
+#| msgid "November 18-21, 2017"
+msgid "20-21 November 2017"
+msgstr "18-21 Novembre 2017"
+
 #: pyconca2017/users/models.py:17
 msgid "Name of User"
 msgstr ""
@@ -710,3 +737,6 @@ msgstr ""
 #: pyconca2017/utils/models.py:13
 msgid "date updated"
 msgstr ""
+
+#~ msgid "Montréal"
+#~ msgstr "Montréal"
