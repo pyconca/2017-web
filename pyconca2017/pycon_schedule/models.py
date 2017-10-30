@@ -133,7 +133,7 @@ class SlotEvent(models.Model):
         unique_together = (
             ('slot', 'location'),
         )
-        ordering = ('location__name',)
+        ordering = ('location__order',)
 
     @property
     def title(self):
