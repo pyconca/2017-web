@@ -3,7 +3,13 @@ from __future__ import absolute_import, unicode_literals
 
 from django.conf.urls import url
 
-from pyconca2017.pycon_schedule.views import ScheduleView, ScheduleRedirectView, PresentationView, AssignFromCSVView, SprintsView
+from pyconca2017.pycon_schedule.views import (
+    ScheduleView,
+    ScheduleRedirectView,
+    PresentationView,
+    AssignFromCSVView,
+    SprintsView,
+)
 
 urlpatterns = [
     url(r'^$', ScheduleRedirectView.as_view(), name='current'),

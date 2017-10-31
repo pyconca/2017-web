@@ -114,7 +114,9 @@ class ScheduleSlot(models.Model):
 
     @property
     def start_events(self):
-        return SlotEvent.objects.select_related('location').filter(slot__schedule=self.schedule, slot__start_time=self.start_time).order_by('location__order')
+        return SlotEvent.objects.select_related('location').filter(slot__schedule=self.schedule,
+                                                                   slot__start_time=self.start_time).order_by(
+            'location__order')
 
 
 class SlotEvent(models.Model):
