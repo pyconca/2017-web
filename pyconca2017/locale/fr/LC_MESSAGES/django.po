@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-02 13:26-0400\n"
+"POT-Creation-Date: 2017-11-07 09:09-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -315,6 +315,8 @@ msgstr "Évènement"
 
 #: pyconca2017/templates/components/layout/footer.html:11
 #: pyconca2017/templates/components/layout/header.html:30
+#: pyconca2017/templates/components/layout/header.html:69
+#: pyconca2017/templates/pages/home.html:19
 msgid "Schedule"
 msgstr "Horaire"
 
@@ -398,11 +400,6 @@ msgstr "18-21 Novembre 2017"
 #: pyconca2017/templates/components/layout/header.html:42
 msgid "Volunteer"
 msgstr "Bénévole"
-
-#: pyconca2017/templates/components/layout/header.html:69
-#: pyconca2017/templates/pages/home.html:20
-msgid "Buy a Ticket"
-msgstr "Acheter un billet"
 
 #: pyconca2017/templates/pages/about.html:10
 msgid "is an initiative to strengthen the Canadian Python community."
@@ -509,11 +506,11 @@ msgstr ""
 msgid "Financial Aid for PyCon Canada"
 msgstr "Aide financière à PyCon Canada"
 
-#: pyconca2017/templates/pages/home.html:39
+#: pyconca2017/templates/pages/home.html:38
 msgid "Where is the event?"
 msgstr "Où se déroule l'évènement?"
 
-#: pyconca2017/templates/pages/home.html:52
+#: pyconca2017/templates/pages/home.html:51
 msgid ""
 "This year, PyCon Canada will be held November 18-21, 2017 in Montreal, "
 "Quebec, Canada."
@@ -521,15 +518,15 @@ msgstr ""
 "Cette année, PyCon Canada se tiendra du 18 au 21 novembre 2017 à Montréal, "
 "Québec, Canada."
 
-#: pyconca2017/templates/pages/home.html:70
+#: pyconca2017/templates/pages/home.html:69
 msgid "Keynote speakers"
 msgstr "Présentatrices invitées"
 
-#: pyconca2017/templates/pages/home.html:80
+#: pyconca2017/templates/pages/home.html:79
 msgid "Site Reliability Engineer"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:81
+#: pyconca2017/templates/pages/home.html:80
 msgid ""
 "\n"
 "          Lynn Root is a Site Reliability Engineer at Spotify; but in "
@@ -550,11 +547,11 @@ msgstr ""
 "une paire d'aiguilles à tricoter.\n"
 "        "
 
-#: pyconca2017/templates/pages/home.html:99
+#: pyconca2017/templates/pages/home.html:98
 msgid "Managing Director and Head of Platform Engineering"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:101
+#: pyconca2017/templates/pages/home.html:100
 msgid ""
 "\n"
 "            Camille Fournier is a Managing Director and Head of Platform "
@@ -568,7 +565,7 @@ msgstr ""
 "Two Sigma. Elle est l'ancienne Chief Technology Officer de Rent The Runway "
 "et ancienne vice-présidente Technology a Goldman Sachs."
 
-#: pyconca2017/templates/pages/home.html:107
+#: pyconca2017/templates/pages/home.html:106
 msgid ""
 "\n"
 "            Fournier earned an undergraduate degree from Carnegie Mellon "
@@ -590,11 +587,11 @@ msgstr ""
 "pour une plus grande diversité au sein des technologies et de la direction. "
 "Son livre, \"The Manager's Path\" a été publié par O'Reilly debut 2017."
 
-#: pyconca2017/templates/pages/home.html:121
+#: pyconca2017/templates/pages/home.html:120
 msgid "Software Engineer"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:122
+#: pyconca2017/templates/pages/home.html:121
 msgid ""
 "\n"
 "          Julia Evans is a software engineer at Stripe. In her spare time, "
@@ -617,11 +614,11 @@ msgstr ""
 "Elle pense qu'il est important de comprendre comment les bases du "
 "fonctionnement de ses systèmes."
 
-#: pyconca2017/templates/pages/home.html:140
+#: pyconca2017/templates/pages/home.html:139
 msgid "Python Core Developer & Software Engineer at Sony Pictures Imageworks"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:142
+#: pyconca2017/templates/pages/home.html:141
 msgid ""
 "\n"
 "            Mariatta is a Python Core Developer and a Software Engineer at "
@@ -637,23 +634,23 @@ msgstr ""
 "conférence PyCascades. Elle a déménagé au Canada il y a près de deux "
 "décennies et considère maintenant Vancouver comme sa maison."
 
-#: pyconca2017/templates/pages/home.html:162
+#: pyconca2017/templates/pages/home.html:161
 msgid "subscribe to our mailing list"
 msgstr "abonnez-vous à notre liste d'envoi"
 
-#: pyconca2017/templates/pages/home.html:166
+#: pyconca2017/templates/pages/home.html:165
 msgid "Receive all event details as they become available"
 msgstr "Recevez tous les détails de l'événement dès qu'ils sont disponibles"
 
-#: pyconca2017/templates/pages/home.html:170
+#: pyconca2017/templates/pages/home.html:169
 msgid "Subscribe"
 msgstr "S'abonner"
 
-#: pyconca2017/templates/pages/home.html:181
+#: pyconca2017/templates/pages/home.html:180
 msgid "Sprints<br/>20-21 November"
 msgstr ""
 
-#: pyconca2017/templates/pages/home.html:189
+#: pyconca2017/templates/pages/home.html:188
 #: pyconca2017/templates/schedule/sprints.html:39
 msgid "Find or Add a Project to the Wiki"
 msgstr ""
@@ -741,6 +738,9 @@ msgstr ""
 #: pyconca2017/utils/models.py:13
 msgid "date updated"
 msgstr ""
+
+#~ msgid "Buy a Ticket"
+#~ msgstr "Acheter un billet"
 
 #~ msgid "Montréal"
 #~ msgstr "Montréal"
