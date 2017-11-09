@@ -13,9 +13,11 @@
 
   <div class="container">
     <div class="">
-      <p>
-        <a href="https://github.com/pyconca/2017-wiki/wiki/Tutorials" class="c-btn c-btn--primary">{% trans 'Sign up for' %} {{ presentation.speaker }} tutorial.</a>
-      </p>
+      {% if presentation.is_tutorial %}
+        <p>
+          <a href="https://github.com/pyconca/2017-wiki/wiki/Tutorials" class="c-btn c-btn--primary">{% trans 'Sign up for' %} {{ presentation.speaker }} tutorial.</a>
+        </p>
+      {% endif %}
 
       {{ presentation.description_html | safe }}
     </div>

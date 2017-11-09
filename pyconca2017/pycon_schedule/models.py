@@ -56,6 +56,10 @@ class Presentation(models.Model):
     def description_html(self):
         return markdown.markdown(bleach.clean(self.description), extensions=["extra"], safe_mode=False)
 
+    @property
+    def is_tutorial(self):
+        return self.slotevent.location.track == Location.Tracks.TRACK_TUTORIAL
+
 
 """ Schedule """
 
