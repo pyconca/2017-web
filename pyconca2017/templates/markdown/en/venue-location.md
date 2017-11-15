@@ -1,1 +1,1 @@
-PyCon Canada 2017 is being held at [Université du Québec à Montréal](https://uqam.ca/) from 18-21 November 2017 in Montréal, Québec, Canada. The event is organized in collaboration with the [UQÀM's Department of Computer Science](http://info.uqam.ca/).
+PyCon Canada 2017 is being held at [Université du Québec à Montréal](https://uqam.ca/) in the **Pavillon Judith-Jasmin** building at [1400 Rue Berri](https://goo.gl/maps/4FDMJhCKQC32), Montreal, Québec. The event is organized in collaboration with the [UQÀM's Department of Computer Science](http://info.uqam.ca/).
