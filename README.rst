@@ -20,11 +20,39 @@ The website for `PyCon Canada 2017`_.
 Setup
 -----------
 
+1. Ensure you have `virtualenvwrapper <https://virtualenvwrapper.readthedocs.io/en/latest/install.html>`_ installed. Then use it to create a virtual env to contain all our Python dependencies, and activate it.
+
+   **Note:** Your Python 3 path might be different from the example below. If you're not sure, try running ``which python3``, and using that path instead.
+
     $ mkvirtualenv 2017-web --python=/usr/bin/python3
+
     $ workon 2017-web
+
+2. Install our dependencies:
+
     $ pip install --upgrade -r requirements/local.txt
+
+3. Configure database stuff. Prod uses PosgreSQL. (TODO: outline this step).
+
+   If you just want to get going quickly, replace the DATABASES part of ``config/settings/common.py`` with this snippet:
+
+   .. code-block:: python
+
+     DATABASES = {
+         'default': {
+             'ENGINE': 'django.db.backends.sqlite3',
+             'NAME': 'mydatabase',
+         }
+     }
+
+4. Set this environment variable for Django, to point it to the settings file it should use:
+
     $ export DJANGO_SETTINGS_MODULE=config.settings.local
+
+5. Setup and run Django!
+
     $ python manage.py migrate
+
     $ python manage.py runserver
 
 
